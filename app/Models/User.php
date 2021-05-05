@@ -40,4 +40,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roles() {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    public function assignRole($role) {
+        $this->roles()->save($role);
+    }
+
+    public function ability() {
+        return $this->roles()->map->abilites->flatten()->pluck('name')->unique();
+    }
 }
