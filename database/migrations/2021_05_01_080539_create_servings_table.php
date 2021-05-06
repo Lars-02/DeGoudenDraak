@@ -14,9 +14,10 @@ class CreateServingsTable extends Migration
     public function up()
     {
         Schema::create('servings', function (Blueprint $table) {
-            $table->unique(['id', 'menu_version']);
+            $table->unique(['number', 'version']);
             $table->id();
-            $table->char('menu_version')->nullable();
+            $table->unsignedBigInteger('number');
+            $table->char('version')->nullable();
             $table->string('name');
             $table->string('description');
             $table->unsignedBigInteger('category_id');

@@ -19,7 +19,8 @@ class CreateTablesTable extends Migration
         });
 
         Schema::create('table_user', function (Blueprint $table) {
-            $table->primary(['table_id', 'user_id']);
+            $table->unique(['table_id', 'user_id', 'start_time']);
+            $table->id();
             $table->unsignedBigInteger('table_id');
             $table->unsignedBigInteger('user_id');
             $table->time('start_time');

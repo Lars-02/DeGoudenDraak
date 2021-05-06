@@ -29,6 +29,7 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('order_id');
             $table->unsignedBigInteger('serving_id');
             $table->integer('amount');
+            $table->string('request')->nullable();
             $table->timestamps();
 
             $table->foreign('order_id')
