@@ -16,17 +16,21 @@ class CreateServingsTable extends Migration
         Schema::create('servings', function (Blueprint $table) {
             $table->unique(['number', 'version']);
             $table->id();
-            $table->unsignedBigInteger('number');
+            $table->integer('number');
             $table->char('version')->nullable();
             $table->string('name');
             $table->string('description');
             $table->unsignedBigInteger('category_id');
-            $table->double('price', 4, 2);
+            $table->double('price', 6, 2);
+            $table->unsignedBigInteger('offer_id')->nullable();
             $table->smallInteger('spice')->nullable();
 
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories');
+            $table->foreign('offer_id')
+                ->references('id')
+                ->on('offers');
         });
 
         Schema::create('allergen_serving', function (Blueprint $table) {
