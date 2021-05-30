@@ -1,13 +1,11 @@
 <x-layout>
-    <tr style="padding-top:50px">
-        <td width="50px">
-        </td>
+    <tr>
         <td align="center" style='border:1px solid black;background:floralwhite'><br>
             <h3>Al jaren is De Gouden Draak een begrip als het gaat om de beste afhaalgerechten in
                 's-Hertogenbosch.<br>
                 Graag trakteren we u op authentieke gerechten uit de Cantonese keuken.</h3>
             <br>
-            <h2><u>Speciale Studentenaanbieding</u></h2>
+            <h2 class="mt-2"><u>Speciale Studentenaanbieding!</u></h2>
             <h1>Chinese Rijsttafel (2 personen)</h1>
             <h3>
                 Maak een keuze uit 3 van onderstaande keuzegerechten:<br><br>
@@ -47,8 +45,6 @@
                 Met witte rijst. (Nasi of bami voor meerprijs mogelijk.)
             </h3>
             <h1>Prijs: €21,00</h1>
-        </td>
-        <td width="50px">
         </td>
     </tr>
 </x-layout>

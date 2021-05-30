@@ -1,4 +1,4 @@
-<nav>
+<nav class="h-12">
     <table id="main_table" style="padding:5px;width:100%;border-collapse: collapse">
         <tr class="flex" style="height:50px;background-color:red">
             <td class="flex" style="text-align:center;color:yellow;font-size:30px">
@@ -9,7 +9,7 @@
             <td class="flex-grow h-full">
                 <a href="/discounts" class="align-middle"
                    style="color:yellow;font-weight:bold;text-decoration: none;">
-                    <marquee behavior="scroll" direction="left">
+                    <marquee behavior="scroll" direction="left" class="w-50 inline-block align-baseline">
                         Welkom bij De Gouden Draak. Klik op deze tekst om de aanbiedingen van deze week te zien!
                     </marquee>
                 </a>
@@ -23,3 +23,4 @@
             </td>
         </tr>
     </table>
+</nav>
