@@ -16,5 +16,4 @@ mix.js('resources/js/app.js', 'public/js')
         require("tailwindcss"),
     ])
     .vue()
-    .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();
