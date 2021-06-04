@@ -17,6 +17,16 @@ class Serving extends Model
         'name',
         'discription',
         'price',
-        'spice'
+        'spice',
+        'category_id',
+        'offer_id'
     ];
+
+    public function offers() {
+        return $this->hasMany(Offer::class, 'offer_id');
+    }
+
+    public function categories() {
+        return $this->hasMany(Category::class, 'category_id');
+    }
 }

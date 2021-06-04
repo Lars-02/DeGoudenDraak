@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row ">
+        <div class="row justify-content-center">
             <table class="table-auto bg-yellow-50 mx-auto">
                 <thead>
                 <tr>
@@ -20,11 +20,6 @@
                                     class="fas fa-info-circle text-blue-500 fa-2x md:fa-5x"></i></a></td>
                     </tr>
                 @endforeach
-                {{--        <tr class="bg-emerald-200">--}}
-                {{--          <td>A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact on Design</td>--}}
-                {{--          <td>Adam</td>--}}
-                {{--          <td>112</td>--}}
-                {{--        </tr>--}}
                 </tbody>
             </table>
         </div>
