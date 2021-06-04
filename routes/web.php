@@ -24,7 +24,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/menu', [MenuController::class, 'index'])->name('menu');
+Route::prefix('menu')->group(function () {
+    Route::get('/', [MenuController::class, 'index'])->name('menu');
+    Route::get('/{servingID}', [MenuController::class, 'details'])->name('menuItem');
+});
 
 Route::get('/news', function () {
     return view('news');

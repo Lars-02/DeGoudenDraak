@@ -10,11 +10,23 @@ class MenuController extends Controller
     public function index()
     {
         $servings = Serving::all();
-        
+
         return view(
-            'menu',
+            'menu.index',
             [
                 "servings" => $servings,
+            ]
+        );
+    }
+
+    public function details($servingID)
+    {
+        $serving = Serving::find($servingID);
+
+        return view(
+            'menu.details',
+            [
+                "serving" => $serving,
             ]
         );
     }

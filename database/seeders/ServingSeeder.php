@@ -6,6 +6,7 @@ use App\Models\Serving;
 use Illuminate\Database\Seeder;
 
 class ServingSeeder extends Seeder {
+
     public function run()
     {
         Serving::create([
@@ -14,9 +15,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Soep Ling Fa',
             'price' => 3.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -25,9 +26,9 @@ class ServingSeeder extends Seeder {
             'number' => 2,
             'name' => 'Kippensoep',
             'price' => 2.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -36,9 +37,9 @@ class ServingSeeder extends Seeder {
             'number' => 3,
             'name' => 'Tomatensoep',
             'price' => 2.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -47,9 +48,9 @@ class ServingSeeder extends Seeder {
             'number' => 4,
             'name' => 'Haaienvinnensoep',
             'price' => 3.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -58,9 +59,9 @@ class ServingSeeder extends Seeder {
             'number' => 5,
             'name' => 'Champignonsoep',
             'price' => 3.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -69,9 +70,9 @@ class ServingSeeder extends Seeder {
             'number' => 6,
             'name' => 'Pekingsoep',
             'price' => 3.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -80,9 +81,9 @@ class ServingSeeder extends Seeder {
             'number' => 7,
             'name' => 'Wan Tan Soep',
             'price' => 4.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -91,20 +92,20 @@ class ServingSeeder extends Seeder {
             'number' => 8,
             'name' => 'Chinese Champignonsoep',
             'price' => 4.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 10,
+            'number' => 11,
             'name' => 'Loempia Fing Fa',
             'price' => 6.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -113,9 +114,9 @@ class ServingSeeder extends Seeder {
             'number' => 11,
             'name' => 'Loempia Compleet',
             'price' => 6.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -124,9 +125,9 @@ class ServingSeeder extends Seeder {
             'number' => 12,
             'name' => 'Loempia met Kip',
             'price' => 3.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -135,9 +136,9 @@ class ServingSeeder extends Seeder {
             'number' => 13,
             'name' => 'Loempia',
             'price' => 3.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -146,9 +147,9 @@ class ServingSeeder extends Seeder {
             'number' => 14,
             'name' => 'Chinese mini loempia',
             'price' => 4.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -157,9 +158,9 @@ class ServingSeeder extends Seeder {
             'number' => 14,
             'name' => 'Vegetarische mini loempia',
             'price' => 4.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -168,9 +169,9 @@ class ServingSeeder extends Seeder {
             'number' => 15,
             'name' => 'Kroepoek',
             'price' => 2.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -179,9 +180,9 @@ class ServingSeeder extends Seeder {
             'number' => 15,
             'name' => 'Casave Kroepoek',
             'price' => 2.7,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -190,9 +191,9 @@ class ServingSeeder extends Seeder {
             'number' => 16,
             'name' => 'Pangsit Goreng',
             'price' => 3.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -201,9 +202,9 @@ class ServingSeeder extends Seeder {
             'number' => 17,
             'name' => 'Pisang Goreng',
             'price' => 3.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -212,9 +213,9 @@ class ServingSeeder extends Seeder {
             'number' => 18,
             'name' => 'Chinese Dim Sum',
             'price' => 5.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -223,31 +224,31 @@ class ServingSeeder extends Seeder {
             'number' => 19,
             'name' => 'Saté Babi',
             'price' => 5.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 20,
+            'number' => 21,
             'name' => 'Saté Ajam',
             'price' => 5.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 20,
+            'number' => 21,
             'name' => 'Saté Garnalen',
             'price' => 9.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -256,9 +257,9 @@ class ServingSeeder extends Seeder {
             'number' => 21,
             'name' => 'Fong Mei Ha',
             'price' => 8.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -267,9 +268,9 @@ class ServingSeeder extends Seeder {
             'number' => 22,
             'name' => 'Patat',
             'price' => 2.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -278,9 +279,9 @@ class ServingSeeder extends Seeder {
             'number' => 23,
             'name' => 'Tsa Siu Mai',
             'price' => 3.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -289,9 +290,9 @@ class ServingSeeder extends Seeder {
             'number' => 24,
             'name' => 'Atjar',
             'price' => 3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -300,9 +301,9 @@ class ServingSeeder extends Seeder {
             'number' => 25,
             'name' => 'Witte Rijst',
             'price' => 3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -311,9 +312,9 @@ class ServingSeeder extends Seeder {
             'number' => 26,
             'name' => 'Grote Pindasaus',
             'price' => 3.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -322,9 +323,9 @@ class ServingSeeder extends Seeder {
             'number' => 27,
             'name' => 'Kleine Pindasaus',
             'price' => 2.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -333,9 +334,9 @@ class ServingSeeder extends Seeder {
             'number' => 28,
             'name' => 'Kippenpootje',
             'price' => 2.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -344,9 +345,9 @@ class ServingSeeder extends Seeder {
             'number' => 29,
             'name' => 'Halve Kip',
             'price' => 6,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -355,9 +356,9 @@ class ServingSeeder extends Seeder {
             'number' => 29,
             'name' => 'Kroket',
             'price' => 1.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -366,31 +367,31 @@ class ServingSeeder extends Seeder {
             'number' => 29,
             'name' => 'Frikandel',
             'price' => 1.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 180,
+            'number' => 181,
             'name' => 'Kleine Sambal',
             'price' => 2.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 30,
+            'number' => 31,
             'name' => 'Bami of Nasi Goreng Ling Fa',
             'price' => 14.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -399,9 +400,9 @@ class ServingSeeder extends Seeder {
             'number' => 31,
             'name' => 'Bami of Nasi Goreng met ei',
             'price' => 5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -410,9 +411,9 @@ class ServingSeeder extends Seeder {
             'number' => 32,
             'name' => 'Bami of Nasi Goreng speciaal',
             'price' => 8.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -421,9 +422,9 @@ class ServingSeeder extends Seeder {
             'number' => 33,
             'name' => 'Bami of Nasi Goreng met saté',
             'price' => 8.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -431,10 +432,10 @@ class ServingSeeder extends Seeder {
             'spice' => null,
             'number' => 34,
             'name' => 'Nasi Yeung Chow',
-            'price' => 10.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'price' => 11.9,
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -443,9 +444,9 @@ class ServingSeeder extends Seeder {
             'number' => 34,
             'name' => 'Nasi Yeung Chow',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -454,9 +455,9 @@ class ServingSeeder extends Seeder {
             'number' => 35,
             'name' => 'Bami of Nasi Malay',
             'price' => 9.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -465,9 +466,9 @@ class ServingSeeder extends Seeder {
             'number' => 36,
             'name' => 'Bami of Nasi met kipfilet',
             'price' => 9.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -476,9 +477,9 @@ class ServingSeeder extends Seeder {
             'number' => 37,
             'name' => 'Bami of Nasi met varkensvlees',
             'price' => 9.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -487,9 +488,9 @@ class ServingSeeder extends Seeder {
             'number' => 38,
             'name' => 'Bami of Nasi met garnalen',
             'price' => 14.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -498,20 +499,20 @@ class ServingSeeder extends Seeder {
             'number' => 39,
             'name' => 'Bami of Nasi met ossenhaas',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 40,
+            'number' => 41,
             'name' => 'Babi Pangang, Foe Yong Hani en saté',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -520,9 +521,9 @@ class ServingSeeder extends Seeder {
             'number' => 41,
             'name' => 'Babi Pangang, Tjap Tjoy en saté',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -531,9 +532,9 @@ class ServingSeeder extends Seeder {
             'number' => 42,
             'name' => 'Babi Pangang, Koe Loe Yuk en saté',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -542,9 +543,9 @@ class ServingSeeder extends Seeder {
             'number' => 43,
             'name' => 'Babi Pangang, Tau Sie Kai en saté',
             'price' => 16.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -553,9 +554,9 @@ class ServingSeeder extends Seeder {
             'number' => 44,
             'name' => 'Koe Loe Yuk, Foe Yong Hai en saté',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -564,9 +565,9 @@ class ServingSeeder extends Seeder {
             'number' => 45,
             'name' => 'Koe Loe Yuk, Tjap Tjoy en saté',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -575,9 +576,9 @@ class ServingSeeder extends Seeder {
             'number' => 46,
             'name' => 'Foe Yong Hai, Tjap Tjoy en saté',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -586,20 +587,20 @@ class ServingSeeder extends Seeder {
             'number' => 47,
             'name' => 'Foe Yong Hai, Kip Kerrie en Saté',
             'price' => 16.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 50,
+            'number' => 51,
             'name' => 'Mihoen Ling Fa',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -608,9 +609,9 @@ class ServingSeeder extends Seeder {
             'number' => 51,
             'name' => 'Mihoen met varkensvlees',
             'price' => 9.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -618,10 +619,10 @@ class ServingSeeder extends Seeder {
             'spice' => null,
             'number' => 52,
             'name' => 'Mihoen met kipfilet',
-            'price' => 10.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'price' => 11.4,
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -630,9 +631,9 @@ class ServingSeeder extends Seeder {
             'number' => 53,
             'name' => 'Mihoen met ossenhaas',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -641,9 +642,9 @@ class ServingSeeder extends Seeder {
             'number' => 54,
             'name' => 'Mihoen met garnalen',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -652,9 +653,9 @@ class ServingSeeder extends Seeder {
             'number' => 55,
             'name' => 'Mihoen Singapore-style',
             'price' => 11.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -663,9 +664,9 @@ class ServingSeeder extends Seeder {
             'number' => 56,
             'name' => 'Mihoen met Cha Sieuw vlees',
             'price' => 11.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -674,9 +675,9 @@ class ServingSeeder extends Seeder {
             'number' => 57,
             'name' => 'Chinese Bami Ling Fa',
             'price' => 16.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -684,10 +685,10 @@ class ServingSeeder extends Seeder {
             'spice' => null,
             'number' => 58,
             'name' => 'Chinese Bami met varkensvlees',
-            'price' => 10.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'price' => 11.1,
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -696,9 +697,9 @@ class ServingSeeder extends Seeder {
             'number' => 58,
             'name' => 'Chinese Bami met kipfilet',
             'price' => 11.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -707,9 +708,9 @@ class ServingSeeder extends Seeder {
             'number' => 58,
             'name' => 'Chinese Bami met Cha Sieuw-vlees',
             'price' => 12.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -718,9 +719,9 @@ class ServingSeeder extends Seeder {
             'number' => 58,
             'name' => 'Chinese Bami met garnalen',
             'price' => 15.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -729,9 +730,9 @@ class ServingSeeder extends Seeder {
             'number' => 58,
             'name' => 'Chinese Bami met ossenhaas',
             'price' => 17.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -740,9 +741,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Bami of Nasi Rames Ling Fa',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -751,9 +752,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Bami of Nasi Rames',
             'price' => 8.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -761,10 +762,10 @@ class ServingSeeder extends Seeder {
             'spice' => null,
             'number' => 1,
             'name' => 'Bami of Nasi Rames speciaal',
-            'price' => 10.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'price' => 11.8,
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -773,9 +774,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Gado Gado',
             'price' => 7.6,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -784,9 +785,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Daging Smoor',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -795,9 +796,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Daging Roedjak',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -806,20 +807,20 @@ class ServingSeeder extends Seeder {
             'number' => 59,
             'name' => 'Foe Yong Hai Ling Fa',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 60,
+            'number' => 61,
             'name' => 'Foe Yong Hai met varkensvlees',
             'price' => 8.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -828,9 +829,9 @@ class ServingSeeder extends Seeder {
             'number' => 61,
             'name' => 'Foe Yong Hai met kipfilet',
             'price' => 9.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -839,9 +840,9 @@ class ServingSeeder extends Seeder {
             'number' => 62,
             'name' => 'Foe Yong Hai met garnalen',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -850,9 +851,9 @@ class ServingSeeder extends Seeder {
             'number' => 63,
             'name' => 'Foe Yong Hai met krab',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -861,9 +862,9 @@ class ServingSeeder extends Seeder {
             'number' => 63,
             'name' => 'Foe Yong Hai met Cha Sieuw Vlees',
             'price' => 11.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -872,9 +873,9 @@ class ServingSeeder extends Seeder {
             'number' => 63,
             'name' => 'Foe Yong Hai met ossenhaas',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -883,9 +884,9 @@ class ServingSeeder extends Seeder {
             'number' => 64,
             'name' => 'Tjap Tjoy Ling Fa',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -894,9 +895,9 @@ class ServingSeeder extends Seeder {
             'number' => 65,
             'name' => 'Tjap Tjoy met varkensvlees',
             'price' => 8.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -905,9 +906,9 @@ class ServingSeeder extends Seeder {
             'number' => 66,
             'name' => 'Tjap Tjoy met kipfilet',
             'price' => 9.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -916,9 +917,9 @@ class ServingSeeder extends Seeder {
             'number' => 67,
             'name' => 'Tjap Tjoy met ossenhaas',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -927,20 +928,20 @@ class ServingSeeder extends Seeder {
             'number' => 68,
             'name' => 'Tjap Tjoy met garnalen',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 70,
+            'number' => 71,
             'name' => 'Babi Pangang',
             'price' => 12.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -949,9 +950,9 @@ class ServingSeeder extends Seeder {
             'number' => 71,
             'name' => 'Babi Pangang in ketjapsaus',
             'price' => 12.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -960,9 +961,9 @@ class ServingSeeder extends Seeder {
             'number' => 72,
             'name' => 'Cha Sieuw',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -971,9 +972,9 @@ class ServingSeeder extends Seeder {
             'number' => 73,
             'name' => 'Cha Sieuw in pikante saus',
             'price' => 13.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -982,9 +983,9 @@ class ServingSeeder extends Seeder {
             'number' => 74,
             'name' => 'Geroosterde speenvarken',
             'price' => 13.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -993,9 +994,9 @@ class ServingSeeder extends Seeder {
             'number' => 75,
             'name' => 'Koe Loe Yuk',
             'price' => 11.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1004,9 +1005,9 @@ class ServingSeeder extends Seeder {
             'number' => 76,
             'name' => 'Varkenshaas met kerriesaus',
             'price' => 11.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1015,9 +1016,9 @@ class ServingSeeder extends Seeder {
             'number' => 77,
             'name' => 'Varkenshaas met ketjapsaus',
             'price' => 11.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1026,9 +1027,9 @@ class ServingSeeder extends Seeder {
             'number' => 78,
             'name' => 'Varkenshaas met tomatensaus',
             'price' => 11.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1037,9 +1038,9 @@ class ServingSeeder extends Seeder {
             'number' => 78,
             'name' => 'Varkenshaas met champignons in knoflooksaus',
             'price' => 11.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1048,9 +1049,9 @@ class ServingSeeder extends Seeder {
             'number' => 78,
             'name' => 'Varkenshaas met Chinese champignons',
             'price' => 12.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1059,9 +1060,9 @@ class ServingSeeder extends Seeder {
             'number' => 79,
             'name' => 'Varkenshaas met zwarte bonensaus',
             'price' => 12.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1070,9 +1071,9 @@ class ServingSeeder extends Seeder {
             'number' => 79,
             'name' => 'Varkenshaas met verse ananas in zoetzure saus',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1081,9 +1082,9 @@ class ServingSeeder extends Seeder {
             'number' => 79,
             'name' => 'Yu Sian Yuk',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1092,20 +1093,20 @@ class ServingSeeder extends Seeder {
             'number' => 79,
             'name' => 'SzeChuan Yuk',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 80,
+            'number' => 81,
             'name' => 'Ajam Pangang',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1114,9 +1115,9 @@ class ServingSeeder extends Seeder {
             'number' => 81,
             'name' => 'Ajam Pangang in ketjapsaus',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1125,9 +1126,9 @@ class ServingSeeder extends Seeder {
             'number' => 82,
             'name' => 'Koe Loe Kai',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1136,9 +1137,9 @@ class ServingSeeder extends Seeder {
             'number' => 83,
             'name' => 'Kipfilet met kerriesaus',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1147,9 +1148,9 @@ class ServingSeeder extends Seeder {
             'number' => 84,
             'name' => 'Kipfilet met champignons in knoflooksaus',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1158,9 +1159,9 @@ class ServingSeeder extends Seeder {
             'number' => 85,
             'name' => 'Kipfilet met tomatensaus',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1169,9 +1170,9 @@ class ServingSeeder extends Seeder {
             'number' => 86,
             'name' => 'Kipfilet met ketjapsaus',
             'price' => 13,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1180,9 +1181,9 @@ class ServingSeeder extends Seeder {
             'number' => 87,
             'name' => 'Kipfilet met broccoli in knoflooksaus',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1191,9 +1192,9 @@ class ServingSeeder extends Seeder {
             'number' => 88,
             'name' => 'Kipfilet met Chinese champignons',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1202,20 +1203,20 @@ class ServingSeeder extends Seeder {
             'number' => 89,
             'name' => 'Kipfilet met zwarte pepersaus',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 90,
+            'number' => 91,
             'name' => 'Kipfilet met verse ananas in zoetzure saus',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1224,9 +1225,9 @@ class ServingSeeder extends Seeder {
             'number' => 91,
             'name' => 'Kipfilet met zwarte pepersaus',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1235,9 +1236,9 @@ class ServingSeeder extends Seeder {
             'number' => 92,
             'name' => 'Tjieuw Yem Kai',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1246,9 +1247,9 @@ class ServingSeeder extends Seeder {
             'number' => 93,
             'name' => 'Yao Koe Kai',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1257,9 +1258,9 @@ class ServingSeeder extends Seeder {
             'number' => 94,
             'name' => 'Lychee Kai',
             'price' => 13.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1268,9 +1269,9 @@ class ServingSeeder extends Seeder {
             'number' => 95,
             'name' => 'Yu Sian Kai',
             'price' => 13.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1279,9 +1280,9 @@ class ServingSeeder extends Seeder {
             'number' => 96,
             'name' => 'Sze Chuan Kai',
             'price' => 13.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1290,9 +1291,9 @@ class ServingSeeder extends Seeder {
             'number' => 97,
             'name' => 'Kung Bao Kai',
             'price' => 13.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1301,9 +1302,9 @@ class ServingSeeder extends Seeder {
             'number' => 98,
             'name' => 'Garnalen met champignons in knoflooksaus',
             'price' => 15.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1312,130 +1313,130 @@ class ServingSeeder extends Seeder {
             'number' => 99,
             'name' => 'Garnalen met tomatensaus',
             'price' => 15.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 100,
+            'number' => 11,
             'name' => 'Garnalen met ketjapsaus',
             'price' => 15.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 101,
+            'number' => 111,
             'name' => 'Garnalen met broccoli',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 102,
+            'number' => 112,
             'name' => 'Garnalen met Chinese champignons',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 103,
+            'number' => 113,
             'name' => 'Garnalen met kerriesaus',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 104,
+            'number' => 114,
             'name' => 'Garnalen met zwarte bonensaus',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 105,
+            'number' => 115,
             'name' => 'Garnalen met zwarte pepersaus',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 106,
+            'number' => 116,
             'name' => 'Garnalen met chilisaus',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 107,
+            'number' => 117,
             'name' => 'Yu Sian Haa',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 108,
+            'number' => 118,
             'name' => 'Tjieuw Yem Haa',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 109,
+            'number' => 119,
             'name' => 'Tja Tai Haa',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 110,
+            'number' => 111,
             'name' => 'Sze Chuan Haa',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1444,9 +1445,9 @@ class ServingSeeder extends Seeder {
             'number' => 111,
             'name' => 'Ossenhaas met chanpignons in knoflooksaus',
             'price' => 16.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1455,9 +1456,9 @@ class ServingSeeder extends Seeder {
             'number' => 112,
             'name' => 'Ossenhaas met tomatensaus',
             'price' => 16.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1466,9 +1467,9 @@ class ServingSeeder extends Seeder {
             'number' => 113,
             'name' => 'Ossenhaas met ketjapsaus',
             'price' => 16.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1477,9 +1478,9 @@ class ServingSeeder extends Seeder {
             'number' => 114,
             'name' => 'Ossenhaas met broccoli',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1488,9 +1489,9 @@ class ServingSeeder extends Seeder {
             'number' => 115,
             'name' => 'Ossenhaas met Chinese champignons',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1499,9 +1500,9 @@ class ServingSeeder extends Seeder {
             'number' => 116,
             'name' => 'Ossenhaas met kerriesaus',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1510,9 +1511,9 @@ class ServingSeeder extends Seeder {
             'number' => 117,
             'name' => 'Ossenhaas met zwarte bonensaus',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1521,9 +1522,9 @@ class ServingSeeder extends Seeder {
             'number' => 118,
             'name' => 'Ossenhaas met zwarte pepersaus',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1532,20 +1533,20 @@ class ServingSeeder extends Seeder {
             'number' => 119,
             'name' => 'Yu Sian Ngau Yuk',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
             'version' => null,
             'spice' => null,
-            'number' => 120,
+            'number' => 121,
             'name' => 'Sze Chuan Ngau Yuk',
             'price' => 17.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1554,9 +1555,9 @@ class ServingSeeder extends Seeder {
             'number' => 121,
             'name' => 'Visfilet met kerriesaus',
             'price' => 14.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1565,9 +1566,9 @@ class ServingSeeder extends Seeder {
             'number' => 122,
             'name' => 'Visfilet met oestersaus',
             'price' => 14.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1576,9 +1577,9 @@ class ServingSeeder extends Seeder {
             'number' => 123,
             'name' => 'Visfilet met zoetzure saus',
             'price' => 14.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1587,9 +1588,9 @@ class ServingSeeder extends Seeder {
             'number' => 124,
             'name' => 'Hong Shau Yu',
             'price' => 14.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1598,9 +1599,9 @@ class ServingSeeder extends Seeder {
             'number' => 125,
             'name' => 'Tjeuw Yem Yu',
             'price' => 15,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1609,9 +1610,9 @@ class ServingSeeder extends Seeder {
             'number' => 126,
             'name' => 'San Sching Po',
             'price' => 16.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1620,9 +1621,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Geroosterde Peking Eend',
             'price' => 16.6,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1631,9 +1632,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Peking Eend met verse ananas in zoetzure saus',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1642,9 +1643,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Peking Eend met Chinese champignons in oestersaus',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1653,9 +1654,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Yu Sian Ya',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
 
         ]);
 
@@ -1665,9 +1666,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Tiepan Ling Fa',
             'price' => 17.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1676,9 +1677,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Tiepan Kai',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1687,9 +1688,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Tiepan San Yuk',
             'price' => 17.1,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1698,9 +1699,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Tiepan Haa',
             'price' => 17.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1709,9 +1710,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Tiepan Ngau Yuk',
             'price' => 19.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1720,9 +1721,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Tau Fu Po',
             'price' => 15.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1731,9 +1732,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Vegetarische Tjap Tjoy',
             'price' => 8.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1742,9 +1743,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Lo Han Zhai',
             'price' => 11.2,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1753,9 +1754,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Vegetarische Foe Yong Hai',
             'price' => 8.3,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1764,9 +1765,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Frites, saté (2st.) en ei',
             'price' => 6.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1775,9 +1776,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Frites, kippootje en ei',
             'price' => 6.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1786,9 +1787,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Frites, mini loempia (2st.) en ei',
             'price' => 6.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1797,9 +1798,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Kinder Bami of Nasi met saté (2st.) en ei',
             'price' => 6.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1808,9 +1809,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Indische rijsttafel (voor 1 persoon)',
             'price' => 16.4,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1819,9 +1820,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Indische rijsttafel<br>Vanaf 2 personen... Per persoon',
             'price' => 15,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1830,9 +1831,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Chinese Indische Rijsttafel<br>Vanaf 4 personen... per persoon',
             'price' => 16.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1841,9 +1842,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Chinese Rijsttafel<br>Vanaf 2 personen... per persoon',
             'price' => 17,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1852,9 +1853,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Kantones Rijsttafel<br>Vanaf 2 personen... per persoon',
             'price' => 23,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1863,9 +1864,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Sze Chuan Rijsttafel<br>Vanaf 2 personen... per persoon',
             'price' => 23,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1874,9 +1875,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Buffet Menu A, per persoon',
             'price' => 12.8,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1885,9 +1886,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Buffet Menu B, per persoon',
             'price' => 15,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1895,10 +1896,10 @@ class ServingSeeder extends Seeder {
             'spice' => null,
             'number' => 1,
             'name' => 'Bami of Nasi Goreng ipv rijst',
-            'price' => 0.9,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'price' => 1.9,
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1907,9 +1908,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Mihoen Goreng ipv rijst',
             'price' => 2.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
 
         Serving::create([
@@ -1918,9 +1919,9 @@ class ServingSeeder extends Seeder {
             'number' => 1,
             'name' => 'Chinese Bami ipv rijst',
             'price' => 2.5,
-            'category_id' => 0,
-            'offer_id' => 0,
-            'description' => 'Hier komt een omschrijving'
+            'category_id' => 1,
+            'offer_id' => 1,
+            'description' => 'Hier komt een beschrijving'
         ]);
     }
 }

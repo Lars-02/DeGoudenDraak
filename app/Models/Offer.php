@@ -10,4 +10,10 @@ class Offer extends Model
     use HasFactory;
 
     public $timestamps = false;
+
+    protected $fillable = [
+        'price',
+        'start_at',
+        'ending_at',
+    ];
 }
