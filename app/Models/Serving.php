@@ -10,4 +10,13 @@ class Serving extends Model
     use HasFactory;
 
     public $timestamps = false;
+
+    protected $fillable = [
+        'number',
+        'version',
+        'name',
+        'discription',
+        'price',
+        'spice'
+    ];
 }

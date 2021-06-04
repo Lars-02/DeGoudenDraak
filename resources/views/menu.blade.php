@@ -7,4 +7,9 @@
             <img width="100%" src="{{asset("/images/restaurant-menukaart-1.jpg")}}">
         </td>
     </tr>
+
+    @foreach ($servings as $serving)
+        <p>{{$serving}}</p>
+        <br>
+     @endforeach
 </x-layout>
