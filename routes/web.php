@@ -26,6 +26,7 @@ Route::get('/contact', function () {
 
 Route::prefix('menu')->group(function () {
     Route::get('/', [MenuController::class, 'index'])->name('menu');
+    Route::get('/pdf', [MenuController::class, 'makepdf'])->name('menuPdf');
     Route::get('/{servingID}', [MenuController::class, 'details'])->name('menuItem');
 });
 

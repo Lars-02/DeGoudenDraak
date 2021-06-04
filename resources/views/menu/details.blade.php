@@ -83,7 +83,7 @@
                                             <p>Category:</p>
                                         </div>
                                         <div class="flex-1 inline-flex items-center">
-                                            <p class="">{{$serving->categories}}</p>
+{{--                                            <p class="">{{$serving->categories}}</p>--}}
                                         </div>
                                     </div>
                                     <div class="flex p-4 pb-2 border-t border-gray-200 "></div>
@@ -92,7 +92,8 @@
                         </div>
                     </div>
 
-                    @for($i = 0; $i < count($serving->offers); $i++)
+{{--                    @for($i = 0; $i < count($serving->offers); $i++)--}}
+                    @for($i = 0; $i < 1; $i++)
                         <div class="flex flex-col ">
                             <div class="bg-white shadow-md  rounded-3xl p-4">
                                 <div class="flex-none lg:flex">
@@ -107,7 +108,7 @@
                                             </div>
                                             <div class="flex-1 inline-flex items-center">
                                                 <p class="">
-                                                    &#8364;{{$serving->offers[$i]->price}}</p>
+{{--                                                    &#8364;{{$serving->offers[$i]->price}}</p>--}}
                                             </div>
                                         </div>
 
@@ -116,7 +117,7 @@
                                                 <p>Start aanbieding:</p>
                                             </div>
                                             <div class="flex-1 inline-flex items-center">
-                                                <p class="">{{$serving->offers[0]->start_at}}</p>
+{{--                                                <p class="">{{$serving->offers[0]->start_at}}</p>--}}
                                             </div>
                                         </div>
 
@@ -125,7 +126,7 @@
                                                 <p>Einde aanbieding:</p>
                                             </div>
                                             <div class="flex-1 inline-flex items-center">
-                                                <p class="">{{$serving->offers[0]->ending_at}}</p>
+{{--                                                <p class="">{{$serving->offers[0]->ending_at}}</p>--}}
                                             </div>
                                         </div>
                                         <div class="flex p-4 pb-2 border-t border-gray-200 "></div>
