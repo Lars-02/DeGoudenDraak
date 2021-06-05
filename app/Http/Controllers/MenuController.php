@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Serving;
+use Carbon\Carbon;
 use Mpdf\Mpdf;
 
 class MenuController extends Controller
@@ -39,7 +40,7 @@ class MenuController extends Controller
         $servings = Serving::all();
 
         $mpdf = new Mpdf();
-        $mpdf->WriteHTML('<h2>De Gouden Draak</h2><h1>Menu</h1>');
+        $mpdf->WriteHTML('<h2>De Gouden Draak</h2><h1>Menu</h1><h3>(' . Carbon::now() . ')</h3>');
         $mpdf->WriteHTML('<div class="container">
                 <div class="row justify-content-center">
                     <table class="table-auto bg-yellow-50 mx-auto">
