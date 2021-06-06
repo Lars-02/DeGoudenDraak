@@ -7,7 +7,7 @@
                 <img style="height: 50px;" src="{{asset("/images/dragon-small-flipped.png")}}" alt="Golden Dragon">
             </td>
             <td class="flex-grow h-full">
-                <a href="/discounts" class="align-middle"
+                <a href="/discounts" class="flex flex-row justify-content-center"
                    style="color:yellow;font-weight:bold;text-decoration: none;">
                     <marquee behavior="scroll" direction="left" class="w-50 inline-block align-baseline">
                         Welkom bij De Gouden Draak. Klik op deze tekst om de aanbiedingen van deze week te zien!
