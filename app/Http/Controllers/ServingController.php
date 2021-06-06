@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Offer;
 use App\Models\Serving;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -40,11 +42,17 @@ class ServingController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function create()
     {
-        //
+        $categories = Category::all()->mapWithKeys(function ($item) {
+            return [$item['id'] => $item['number'].$item['version'].' '.$item['name']];
+        });
+        $offers = Offer::all()->mapWithKeys(function ($item) {
+            return [$item['id'] => $item['price'].' euro, '.$item['start_at'].' - '.$item['ending_at']];
+        });
+        return view('menu.create', compact(['categories', 'offers']));
     }
 
     /**
