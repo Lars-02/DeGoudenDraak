@@ -1,4 +1,4 @@
-<x-layout>homepage.php
+<x-layout>
     <tr>
         <td></td>
         <td>
