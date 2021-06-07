@@ -67,7 +67,6 @@ class ServingController extends Controller
     public function store(ServingRequest $request)
     {
         $serving = Serving::create($request->validated());
-
         return redirect(route('serving.show', ["serving" => $serving]));
     }
 
@@ -109,7 +108,7 @@ class ServingController extends Controller
     public function update(ServingRequest $request, Serving $serving)
     {
         $serving->update($request->validated());
-        return redirect(route('serving.edit', ["serving" => $serving]));
+        return redirect(route('serving.show'));
     }
 
     /**

@@ -1,4 +1,4 @@
-<form action="{{ route('menu.store') }}" method="POST">
+<form action="{{ route('serving.store') }}" method="POST">
     @csrf
     <div class="select-none grid gap-1 sm:gap-2 md:gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
         <x-input type="number" id="number">{{ __('serving.number') }}</x-input>

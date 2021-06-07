@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OfferRequest;
 use App\Models\Offer;
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Redirector;
 
 class OfferController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|Response
+     * @return Application|Factory|View|Response
      */
     public function index()
     {
@@ -23,66 +27,58 @@ class OfferController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function create()
     {
-        //
+        return view('offer.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return Response
+     * @param OfferRequest $request
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function store(Request $request)
+    public function store(OfferRequest $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Offer  $offer
-     * @return Response
-     */
-    public function show(Offer $offer)
-    {
-        //
+        $offer = Offer::create($request->validated());
+        return redirect(route('offer.index'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Offer  $offer
-     * @return Response
+     * @param Offer $offer
+     * @return Application|Factory|View|Response
      */
     public function edit(Offer $offer)
     {
-        //
+        return view('offer.edit', compact(['offer']));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Offer  $offer
-     * @return Response
+     * @param OfferRequest $request
+     * @param Offer $offer
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function update(Request $request, Offer $offer)
+    public function update(OfferRequest $request, Offer $offer)
     {
-        //
+        $offer->update($request->validated());
+        return redirect(route('offer.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Offer  $offer
-     * @return Response
+     * @param Offer $offer
+     * @return Application|RedirectResponse|Response|Redirector
      */
     public function destroy(Offer $offer)
     {
-        //
+        $offer->delete();
+        return redirect(route('offer.index'));
     }
 }

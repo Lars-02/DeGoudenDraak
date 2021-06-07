@@ -17,7 +17,7 @@ class CreateOffersTable extends Migration
             $table->id();
             $table->double('price', 6, 2);
             $table->date('start_at');
-            $table->date('ending_at');
+            $table->date('ending_at')->nullable();
         });
     }
 
