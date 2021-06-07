@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServingRequest;
 use App\Http\Requests\StoreServingRequest;
 use App\Models\Category;
 use App\Models\Offer;
@@ -10,7 +11,6 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 
@@ -61,10 +61,10 @@ class ServingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreServingRequest $request
+     * @param ServingRequest $request
      * @return Application|RedirectResponse|Response|Redirector
      */
-    public function store(StoreServingRequest $request)
+    public function store(ServingRequest $request)
     {
         $serving = Serving::create($request->validated());
 
@@ -86,33 +86,41 @@ class ServingController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param Serving $serving
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function edit(Serving $serving)
     {
-        //
+        $categories = Category::all()->mapWithKeys(function ($item) {
+            return [$item['id'] => $item['number'] . $item['version'] . ' ' . $item['name']];
+        });
+        $offers = Offer::all()->mapWithKeys(function ($item) {
+            return [$item['id'] => $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']];
+        });
+        return view('serving.edit', compact(['serving', 'categories', 'offers']));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param ServingRequest $request
      * @param Serving $serving
-     * @return Response
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function update(Request $request, Serving $serving)
+    public function update(ServingRequest $request, Serving $serving)
     {
-        //
+        $serving->update($request->validated());
+        return redirect(route('serving.edit', ["serving" => $serving]));
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Serving $serving
-     * @return Response
+     * @return Application|RedirectResponse|Response|Redirector
      */
     public function destroy(Serving $serving)
     {
-        //
+        $serving->delete();
+        return redirect(route('serving.index'));
     }
 }

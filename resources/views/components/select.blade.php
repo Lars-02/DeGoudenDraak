@@ -7,9 +7,7 @@
     >
         <option disabled>Kies uw {{$slot}}</option>
         @foreach($options as $option => $value)
-            <option
-                value="{{ $option }}"
-            >{{ $value }}</option>
+            <option value="{{ $option }}" @isset($serving) @if($serving->$options->contains($value->id)) selected @endif @endisset>{{ $value }}</option>
         @endforeach
     </select>
 </div>

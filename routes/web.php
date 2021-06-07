@@ -33,7 +33,9 @@ Route::get('/contact', function () {
 });
 
 Route::get('menu/pdf', [MenuController::class, 'makepdf'])->name('menuPdf');
-Route::resource('menu', ServingController::class)->parameter('menu', 'serving');
+Route::resource('menu', ServingController::class)
+    ->parameter('menu', 'serving')
+    ->names('serving');
 
 Route::get('/news', function () {
     return view('news');
