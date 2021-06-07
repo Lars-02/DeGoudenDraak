@@ -7,7 +7,7 @@
                         <div class="flex items-center justify-between w-full my-4 pl-4 sm:pr-4">
                             <div class="mr-6">
                                 <h2 class="text-3xl md:text-4xl font-semibold tracking-tight leading-7 md:leading-10 mb-1 truncate text-yellow-200 pb-1">{{$serving->name}}
-                                    informatie</h2>
+                                    {{__('menu_details.information_text')}}</h2>
                                 <div
                                     class="font-base tracking-tight text-gray-600 text-yellow-200">{{$serving->description}}</div>
                             </div>
@@ -23,16 +23,16 @@
                                         </div>
                                         <div class="flex-auto ml-3 justify-evenly py-2">
                                             <div class="flex flex-wrap ">
-                                                <h2 class="flex-auto text-lg font-medium">Pittigheid van gerecht</h2>
+                                                <h2 class="flex-auto text-lg font-medium">{{__('menu_details.spicy_title')}}</h2>
                                             </div>
                                             <p class="mt-3"></p>
                                             <div class="flex py-4  text-sm text-gray-600">
                                                 <div class="flex-1 inline-flex items-center">
-                                                    <p class="">Pittigheid:</p>
+                                                    <p class="">{{__('menu_details.spicy_text')}}</p>
                                                 </div>
                                                 <div class="flex-1 inline-flex items-center">
                                                     @if($serving->spice == null)
-                                                        <p>Onbekend</p>
+                                                        <p>{{__('menu_details.spicy_unknown')}}</p>
                                                     @else
                                                         @for($i = 0; $i < 3; $i++)
                                                             @if($serving->spice >= $i)
@@ -64,12 +64,12 @@
                                         </div>
                                         <div class="flex-auto ml-3 justify-evenly py-2">
                                             <div class="flex flex-wrap ">
-                                                <h2 class="flex-auto text-lg font-medium">Gegevens</h2>
+                                                <h2 class="flex-auto text-lg font-medium">{{__('menu_details.data_title')}}</h2>
                                             </div>
                                             <p class="mt-3"></p>
                                             <div class="flex py-2  text-sm text-gray-600">
                                                 <div class="flex-1 inline-flex items-center">
-                                                    <p>Prijs:</p>
+                                                    <p>{{__('menu_details.data_price')}}</p>
                                                 </div>
                                                 <div class="flex-1 inline-flex items-center">
                                                     <p class="">
@@ -79,7 +79,7 @@
 
                                             <div class="flex pb-4  text-sm text-gray-600">
                                                 <div class="flex-1 inline-flex items-center">
-                                                    <p>Category:</p>
+                                                    <p>{{__('menu_details.data_category')}}</p>
                                                 </div>
                                                 <div class="flex-1 inline-flex items-center">
                                                     {{--                                            <p class="">{{$serving->categories}}</p>--}}
@@ -98,12 +98,12 @@
                                         <div class="flex-none lg:flex">
                                             <div class="flex-auto ml-3 justify-evenly py-2">
                                                 <div class="flex flex-wrap ">
-                                                    <h2 class="flex-auto text-lg font-medium">Aanbieding {{$i + 1}}</h2>
+                                                    <h2 class="flex-auto text-lg font-medium">{{__('menu_details.offer_title')}} {{$i + 1}}</h2>
                                                 </div>
                                                 <p class="mt-3"></p>
                                                 <div class="flex py-2  text-sm text-gray-600">
                                                     <div class="flex-1 inline-flex items-center">
-                                                        <p>Prijs:</p>
+                                                        <p>{{__('menu_details.offer_price')}}</p>
                                                     </div>
                                                     <div class="flex-1 inline-flex items-center">
                                                         <p class="">
@@ -113,7 +113,7 @@
 
                                                 <div class="flex text-sm text-gray-600">
                                                     <div class="flex-1 inline-flex items-center">
-                                                        <p>Start aanbieding:</p>
+                                                        <p>{{__('menu_details.offer_start')}}</p>
                                                     </div>
                                                     <div class="flex-1 inline-flex items-center">
                                                         {{--                                                <p class="">{{$serving->offers[0]->start_at}}</p>--}}
@@ -122,7 +122,7 @@
 
                                                 <div class="flex pb-4  text-sm text-gray-600">
                                                     <div class="flex-1 inline-flex items-center">
-                                                        <p>Einde aanbieding:</p>
+                                                        <p>{{__('menu_details.offer_end')}}</p>
                                                     </div>
                                                     <div class="flex-1 inline-flex items-center">
                                                         {{--                                                <p class="">{{$serving->offers[0]->ending_at}}</p>--}}
