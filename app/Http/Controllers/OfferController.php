@@ -21,7 +21,7 @@ class OfferController extends Controller
     public function index()
     {
         $offers = Offer::all();
-        return view('offer.index', ['offers' => $offers]);
+        return view('offer.index', compact(['offers']));
     }
 
     /**
@@ -42,7 +42,7 @@ class OfferController extends Controller
      */
     public function store(OfferRequest $request)
     {
-        $offer = Offer::create($request->validated());
+        Offer::create($request->validated());
         return redirect(route('offer.index'));
     }
 

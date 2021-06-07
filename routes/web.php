@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
@@ -43,6 +44,9 @@ Route::get('/news', function () {
 
 Route::resource('offer', OfferController::class)
     ->except('show');
+
+Route::resource('category', CategoryController::class)
+    ->except('show', 'create');
 
 Auth::routes();
 
