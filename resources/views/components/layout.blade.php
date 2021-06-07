@@ -99,10 +99,8 @@
                                 <img src="{{asset("/images/dragon-small-flipped.png")}}"
                                      style="float:right;height:200px" alt="Golden Dragon">
                                 <span
-                                    style="font-size:40px;font-weight:bold;color:yellow">Chinees Indische Specialiteiten</span><br>
+                                    style="font-size:40px;font-weight:bold;color:yellow">{{__('layout.subtitle')}}</span><br>
                                 <span style="font-size:50px;font-weight:bold;color:yellow">De Gouden Draak</span><br>
-                            </p>
-                            <p>
 
                             {{--Redirect to other pages--}}
                             <table style="margin:auto;font-size:20px;color:white" border="1px solid white">
@@ -110,24 +108,23 @@
                                     <td valign="middle">
                                         <a href="/menu"
                                            style="color:white;margin-left:1vw;margin-right:1vw;">
-                                            Menukaart
+                                            {{__('layout.menu')}}
                                         </a>
                                     </td>
                                     <td valign="middle">
                                         <a href="/news"
                                            style="color:white;margin-left:1vw;margin-right:1vw;">
-                                            Nieuws
+                                            {{__('layout.news')}}
                                         </a>
                                     </td>
                                     <td valign="middle">
                                         <a href="/contact"
                                            style="color:white;margin-left:1vw;margin-right:1vw;">
-                                            Contact
+                                            {{__('layout.contact')}}
                                         </a>
                                     </td>
                                 </tr>
                             </table>
-                            </p>
                         </td>
                     </tr>
                     <tr style="padding-top:50px">
@@ -142,7 +139,7 @@
                 <br>
 
                 {{--Page end with yellow swiggly lines--}}
-                <div text-align="center"><a href="/contact">Naar Contact</a></div>
+                <div text-align="center"><a href="/contact">{{__('layout.footer')}}</a></div>
 
 
             <td style="width:25px;"></td>
