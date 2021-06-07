@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ServingRequest;
-use App\Http\Requests\StoreServingRequest;
+use App\Models\Allergen;
 use App\Models\Category;
 use App\Models\Offer;
 use App\Models\Serving;
@@ -55,7 +55,8 @@ class ServingController extends Controller
         $offers = Offer::all()->mapWithKeys(function ($item) {
             return [$item['id'] => $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']];
         });
-        return view('serving.create', compact(['categories', 'offers']));
+        $allergens = Allergen::all()->pluck('name', 'id');
+        return view('serving.create', compact(['categories', 'offers', 'allergens']));
     }
 
     /**
@@ -78,7 +79,7 @@ class ServingController extends Controller
      */
     public function show(Serving $serving)
     {
-        return view('serving.show',["serving" => $serving]);
+        return view('serving.show', ["serving" => $serving]);
     }
 
     /**
@@ -89,13 +90,16 @@ class ServingController extends Controller
      */
     public function edit(Serving $serving)
     {
-        $categories = Category::all()->mapWithKeys(function ($item) {
-            return [$item['id'] => $item['number'] . $item['version'] . ' ' . $item['name']];
+        $categories = Category::all()->mapWithKeys(function ($item) use ($serving) {
+            return  [$item['id'] => [$serving->category->id === $item['id'], $item['number'] . $item['version'] . ' ' . $item['name']]];
         });
-        $offers = Offer::all()->mapWithKeys(function ($item) {
-            return [$item['id'] => $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']];
+        $offers = Offer::all()->mapWithKeys(function ($item) use ($serving) {
+            return  [$item['id'] => [$serving->offer->id === $item['id'], $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']]];
         });
-        return view('serving.edit', compact(['serving', 'categories', 'offers']));
+        $allergens = Allergen::all()->mapWithKeys(function ($item) use ($serving) {
+            return  [$item['id'] => [$serving->allergens->contains($item['id']), $item['name']]];
+        });
+        return view('serving.edit', compact(['serving', 'categories', 'offers', 'allergens']));
     }
 
     /**
@@ -107,8 +111,12 @@ class ServingController extends Controller
      */
     public function update(ServingRequest $request, Serving $serving)
     {
-        $serving->update($request->validated());
-        return redirect(route('serving.show'));
+        $validated = $request->validated();
+        $serving->allergens()->sync(empty($validated['allergens']) ? null : $validated['allergens']);
+        unset($validated['allergens']);
+        $serving->update($validated);
+        $serving->save();
+        return redirect(route('serving.edit', $serving));
     }
 
     /**

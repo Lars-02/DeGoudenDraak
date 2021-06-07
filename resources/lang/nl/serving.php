@@ -12,5 +12,6 @@ return [
     'price' => 'Prijs',
     'offer' => 'Korting',
     'offers' => 'Kortingen',
-
+    'allergen' => 'Allergeen',
+    'allergens' => 'Allergenen'
 ];

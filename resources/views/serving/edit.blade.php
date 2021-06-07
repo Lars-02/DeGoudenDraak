@@ -12,6 +12,7 @@
 
         <x-input type="number" id="price" value="{{$serving->price}}">{{ __('serving.price') }}</x-input>
         <x-select id="offer_id" :options="$offers">{{ __('serving.offer') }}</x-select>
+        <x-select id="allergens" name="allergens[]" :options="$allergens" multi="true">{{ __('serving.allergens') }}</x-select>
     </div>
     <x-button type="submit">{{ __('auth.submit') }}</x-button>
 </form>

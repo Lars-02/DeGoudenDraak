@@ -11,9 +11,5 @@ class Offer extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'price',
-        'start_at',
-        'ending_at',
-    ];
+    protected $guarded = [];
 }

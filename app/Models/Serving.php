@@ -11,22 +11,17 @@ class Serving extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'number',
-        'version',
-        'name',
-        'description',
-        'price',
-        'spice',
-        'category_id',
-        'offer_id'
-    ];
+    protected $guarded = [];
 
-    public function offers() {
-        return $this->hasMany(Offer::class, 'offer_id');
+    public function offer() {
+        return $this->belongsTo(Offer::class);
     }
 
-    public function categories() {
-        return $this->hasMany(Category::class, 'category_id');
+    public function category() {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function allergens() {
+        return $this->belongsToMany(Allergen::class);
     }
 }
