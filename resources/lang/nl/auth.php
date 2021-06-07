@@ -16,5 +16,6 @@ return [
     'password' => 'Het opgegeven wachtwoord is onjuist.',
     'throttle' => 'Te veel mislukte loginpogingen. Probeer het over :seconds seconden nogmaals.',
     'submit' => 'Opslaan',
+    'delete' => 'Verwijderen',
 
 ];

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AllergenController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
@@ -47,6 +48,9 @@ Route::resource('offer', OfferController::class)
 
 Route::resource('category', CategoryController::class)
     ->except('show', 'create');
+
+Route::resource('allergen', AllergenController::class)
+    ->only('index', 'store', 'destroy');
 
 Auth::routes();
 
