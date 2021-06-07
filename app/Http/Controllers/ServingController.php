@@ -27,7 +27,7 @@ class ServingController extends Controller
         $servings = $this->searchDishes($search);
 
         return view(
-            'menu.index',
+            'serving.index',
             [
                 "servings" => $servings,
                 "query" => $search,
@@ -55,7 +55,7 @@ class ServingController extends Controller
         $offers = Offer::all()->mapWithKeys(function ($item) {
             return [$item['id'] => $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']];
         });
-        return view('menu.create', compact(['categories', 'offers']));
+        return view('serving.create', compact(['categories', 'offers']));
     }
 
     /**
@@ -68,7 +68,7 @@ class ServingController extends Controller
     {
         $serving = Serving::create($request->validated());
 
-        return redirect(route('menu.show', ["serving" => $serving]));
+        return redirect(route('serving.show', ["serving" => $serving]));
     }
 
     /**
@@ -79,7 +79,7 @@ class ServingController extends Controller
      */
     public function show(Serving $serving)
     {
-        return view('menu.details',["serving" => $serving]);
+        return view('serving.show',["serving" => $serving]);
     }
 
     /**
