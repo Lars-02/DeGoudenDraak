@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreServingRequest;
 use App\Models\Category;
 use App\Models\Offer;
 use App\Models\Serving;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Redirector;
 
 class ServingController extends Controller
 {
@@ -47,10 +50,10 @@ class ServingController extends Controller
     public function create()
     {
         $categories = Category::all()->mapWithKeys(function ($item) {
-            return [$item['id'] => $item['number'].$item['version'].' '.$item['name']];
+            return [$item['id'] => $item['number'] . $item['version'] . ' ' . $item['name']];
         });
         $offers = Offer::all()->mapWithKeys(function ($item) {
-            return [$item['id'] => $item['price'].' euro, '.$item['start_at'].' - '.$item['ending_at']];
+            return [$item['id'] => $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']];
         });
         return view('menu.create', compact(['categories', 'offers']));
     }
@@ -58,12 +61,14 @@ class ServingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @return Response
+     * @param StoreServingRequest $request
+     * @return Application|RedirectResponse|Response|Redirector
      */
-    public function store(Request $request)
+    public function store(StoreServingRequest $request)
     {
-        //
+        $serving = Serving::create($request->validated());
+
+        return redirect(route('menu.show', ["serving" => $serving]));
     }
 
     /**
@@ -74,12 +79,7 @@ class ServingController extends Controller
      */
     public function show(Serving $serving)
     {
-        return view(
-            'menu.details',
-            [
-                "serving" => $serving,
-            ]
-        );
+        return view('menu.details',["serving" => $serving]);
     }
 
     /**
@@ -96,7 +96,7 @@ class ServingController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
      * @param Serving $serving
      * @return Response
      */

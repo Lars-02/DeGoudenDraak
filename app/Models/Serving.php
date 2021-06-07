@@ -15,7 +15,7 @@ class Serving extends Model
         'number',
         'version',
         'name',
-        'discription',
+        'description',
         'price',
         'spice',
         'category_id',
