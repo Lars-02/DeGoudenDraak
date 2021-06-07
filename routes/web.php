@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use Illuminate\Support\Facades\Auth;
@@ -40,9 +41,7 @@ Route::get('/news', function () {
     return view('news');
 });
 
-Route::get('/discounts', function () {
-    return view('discounts');
-});
+Route::get('/discounts', [DiscountController::class, 'index'])->name('discounts');
 
 Auth::routes();
 
