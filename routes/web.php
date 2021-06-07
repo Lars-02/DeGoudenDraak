@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DiscountController;
+use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ServingController;
@@ -41,7 +41,8 @@ Route::get('/news', function () {
     return view('news');
 });
 
-Route::get('/discounts', [DiscountController::class, 'index'])->name('discounts');
+Route::resource('offer', OfferController::class)
+    ->except('show');
 
 Auth::routes();
 
