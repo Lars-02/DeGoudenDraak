@@ -10,7 +10,7 @@
                 <a href="/discounts" class="flex flex-row justify-content-center"
                    style="color:yellow;font-weight:bold;text-decoration: none;">
                     <marquee behavior="scroll" direction="left" class="w-50 inline-block align-baseline">
-                        Welkom bij De Gouden Draak. Klik op deze tekst om de aanbiedingen van deze week te zien!
+                        <h3>{{__('navbar.marquee')}}.</h3>
                     </marquee>
                 </a>
             </td>

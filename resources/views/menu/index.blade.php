@@ -6,34 +6,7 @@
                 <h1 class="text-3xl md:text-4xl font-semibold tracking-tight leading-7 md:leading-10 mb-1 truncate text-yellow-200 pb-1">
                     Download het menu</h1>
 
-                <a href="/menu/pdf" class="btn btn-success btn-lg w-64 mx-auto mb-4">Download <i class="fa fa-download"
-                                                                                                 aria-hidden="true"></i></a>
-            </div>
-
-            <div class="container">
-                <div class="row justify-content-center">
-                    <table class="table-auto bg-yellow-50 mx-auto">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Gerecht</th>
-                            <th>Beschrijving</th>
-                            <th>Details</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($servings as $serving)
-                            <tr>
-                                <th>{{$serving->id}}</th>
-                                <td>{{$serving->name}}</td>
-                                <td>{{$serving->description}}</td>
-                                <td><a href="/menu/{{ $serving->id }}"><i
-                                            class="fas fa-info-circle text-blue-500 fa-2x md:fa-5x"></i></a></td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                <a href="/menu/pdf" class="btn btn-success btn-lg w-64 mx-auto mb-4">Download <i class="fa fa-download" aria-hidden="true"></i></a>
             </div>
 
             <div class="w-full max-w-screen-xl mx-auto px-6">

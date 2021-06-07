@@ -3,11 +3,10 @@
         <td></td>
         <td>
             <div class="py-5 bg-yellow-50 border-2 border-black">
-                <h3>De Gouden Draak is eenvoudig te vinden, vlak bij het centrum, 5 minuten lopen achter het centraal
-                                station.</h3>
+                <h3>{{__('contact.content_1')}}.</h3>
                 <br>
-                <h3>Onderwijsboulevard 215, kamer OG112</h3>
-                <h3>5223 DE 's-Hertogenbosch</h3>
+                <h3>{{__('contact.content_2')}}.</h3>
+                <h3>{{__('contact.content_3')}}.</h3>
             </div>
         </td>
     </tr>
