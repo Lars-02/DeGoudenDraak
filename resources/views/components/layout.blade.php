@@ -84,6 +84,7 @@
         </tr>
         <tr style="height:50px;background-color:red">
             <td width="7px">
+            <td width="7px">
             <td style="width:25px;border-right:4px solid yellow;border-left:4px solid yellow"></td>
             <td style="width:25px;"></td>
             <td style="width:25px;"></td>
@@ -135,7 +136,6 @@
                         </td>
                     </tr>
 
-                    {{--Page content goes here--}}
                     {{ $slot }}
 
                 </table>

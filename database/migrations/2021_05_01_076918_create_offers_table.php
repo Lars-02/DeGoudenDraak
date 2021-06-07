@@ -16,8 +16,8 @@ class CreateOffersTable extends Migration
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
             $table->double('price', 6, 2);
-            $table->dateTime('start_at');
-            $table->dateTime('ending_at');
+            $table->date('start_at');
+            $table->date('ending_at');
         });
     }
 

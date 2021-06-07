@@ -14,8 +14,8 @@ class OfferFactory extends Factory
     {
         return [
             'price' => $this->faker->numberBetween(10, 30),
-            'start_at' => $this->faker->dateTimeBetween('-1 years', '+0 days'),
-            'ending_at' => $this->faker->dateTimeBetween('+2 years', '+20 years'),
+            'start_at' => $this->faker->dateTimeBetween('-1 years', '+2 weeks')->format("Y-m-d"),
+            'ending_at' => $this->faker->dateTimeBetween('+2 weeks', '+1 years')->format("Y-m-d"),
         ];
     }
 

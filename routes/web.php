@@ -3,6 +3,7 @@
 use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ServingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -31,11 +32,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::prefix('menu')->group(function () {
-    Route::get('/', [MenuController::class, 'index'])->name('menu');
-    Route::get('/pdf', [MenuController::class, 'makepdf'])->name('menuPdf');
-    Route::get('/{servingID}', [MenuController::class, 'details'])->name('menuItem');
-});
+Route::get('menu/pdf', [MenuController::class, 'makepdf'])->name('menuPdf');
+Route::resource('menu', ServingController::class);
 
 Route::get('/news', function () {
     return view('news');

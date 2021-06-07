@@ -8,31 +8,6 @@ use Mpdf\Mpdf;
 
 class MenuController extends Controller
 {
-    public function index()
-    {
-        $search = request()->query('q');
-        $servings = $this->searchDishes($search);
-
-        return view(
-            'menu.index',
-            [
-                "servings" => $servings,
-                "query" => $search,
-            ]
-        );
-    }
-
-    public function details($servingID)
-    {
-        $serving = Serving::find($servingID);
-
-        return view(
-            'menu.details',
-            [
-                "serving" => $serving,
-            ]
-        );
-    }
 
     public function makepdf()
     {
@@ -76,17 +51,5 @@ class MenuController extends Controller
         $mpdf->Output('Menu.pdf', 'D');
 
         return redirect('menu');
-    }
-
-    private function searchDishes($search)
-    {
-        $servings = null;
-
-        if ($search) {
-            $servings = Serving::where('name', 'LIKE', '%'.$search.'%')->get();
-        } else
-            $servings = Serving::query()->orderBy("name")->get();
-
-        return $servings;
     }
 }
