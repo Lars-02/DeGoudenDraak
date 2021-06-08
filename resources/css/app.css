@@ -8,11 +8,20 @@
 @tailwind utilities;
 
 .custom-border {
-    border-image-source: url('../../public/images/border.png');
-    border-image-slice: 110 fill;
-    border-image-width: 100px;
-    border-image-outset: 0;
-    border-image-repeat: repeat;
-    margin: 2rem;
-    padding: 100px;
+}
+
+.mirror {
+  transform: scaleX(-1);
+}
+
+@media only screen and (min-width: 600px) {
+    .custom-border {
+        border-image-source: url('../../public/images/border.png');
+        border-image-slice: 110 fill;
+        border-image-width: 100px;
+        border-image-outset: 0;
+        border-image-repeat: repeat;
+        margin: 2rem;
+        padding: 100px;
+    }
 }
