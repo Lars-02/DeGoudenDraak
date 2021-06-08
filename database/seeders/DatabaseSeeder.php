@@ -18,6 +18,5 @@ class DatabaseSeeder extends Seeder
             OfferSeeder::class,
             ServingSeeder::class,
         ]);
-        // \App\Models\User::factory(10)->create();
     }
 }
