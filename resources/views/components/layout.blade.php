@@ -20,15 +20,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body id="app" class="bg-red-700 min-h-screen">
+<body>
+<div class="bg-red-700 min-h-screen flex flex-col">
+    @include('components.layouts.header')
 
-@include('components.layouts.nav')
+    <div class="custom-border flex-grow">
+        <div id="app" class="w-11/12 mx-auto">
+            {{ $slot }}
+        </div>
+    </div>
 
-<div class="w-4/5 mx-auto">
-    {{ $slot }}
+    @include('components.layouts.footer')
 </div>
-
-@include('components.layouts.footer')
-
 </body>
 </html>
