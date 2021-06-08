@@ -12,4 +12,9 @@ class Offer extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
+    public function getNameAttribute()
+    {
+        return $this->price . ' euro, ' . $this->start_at . ' - ' . $this->ending_at;
+    }
 }

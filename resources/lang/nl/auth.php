@@ -17,5 +17,5 @@ return [
     'throttle' => 'Te veel mislukte loginpogingen. Probeer het over :seconds seconden nogmaals.',
     'submit' => 'Opslaan',
     'delete' => 'Verwijderen',
-
+    'edit' => 'Bewerken',
 ];

@@ -23,16 +23,10 @@ class ServingController extends Controller
      */
     public function index()
     {
-        $search = request()->query('q');
-        $servings = $this->searchDishes($search);
+        $query = request()->query('q');
+        $servings = $this->searchDishes($query);
 
-        return view(
-            'serving.index',
-            [
-                "servings" => $servings,
-                "query" => $search,
-            ]
-        );
+        return view('serving.index', compact(['servings', 'query']));
     }
 
     private function searchDishes($search)
@@ -79,7 +73,7 @@ class ServingController extends Controller
      */
     public function show(Serving $serving)
     {
-        return view('serving.show', ["serving" => $serving]);
+        return view('serving.show', compact('serving'));
     }
 
     /**
@@ -116,7 +110,7 @@ class ServingController extends Controller
         unset($validated['allergens']);
         $serving->update($validated);
         $serving->save();
-        return redirect(route('serving.edit', $serving));
+        return redirect(route('serving.show', $serving));
     }
 
     /**

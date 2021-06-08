@@ -20,14 +20,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-red-700 mx-4 my-2">
-<div id="app" class="min-h-screen flex flex-col">
+<body id="app" class="bg-red-700 min-h-screen">
 
-    @include('components.layouts.nav')
+@include('components.layouts.nav')
 
+<div class="w-4/5 mx-auto">
     {{ $slot }}
-
-    @include('components.layouts.footer')
 </div>
+
+@include('components.layouts.footer')
+
 </body>
 </html>

@@ -24,4 +24,9 @@ class Serving extends Model
     public function allergens() {
         return $this->belongsToMany(Allergen::class);
     }
+
+    public function getFullNameAttribute()
+    {
+        return $this->number . $this->version . ' ' . $this->name;
+    }
 }
