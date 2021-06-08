@@ -16,11 +16,11 @@
         @foreach($options as $option => $value)
             <option
                 value="{{ $option }}"
-                @if(is_bool($value[0]) ? $value[0] : false)
+                @if(is_array($value) && (is_bool($value[0]) ? $value[0] : false))
                 selected
                 @endif
             >
-                {{ $value[1] }}
+                {{ is_array($value) ? $value[1] : $value }}
             </option>
         @endforeach
     </select>
