@@ -5,6 +5,7 @@ return [
     'download_text' => 'Download now',
     'menu_title' => 'Menu items',
     'menu_number' => 'Number',
-    'search' => 'Search a dish',
+    'search_name' => 'Search a dish',
+    'search_category' => 'Search a category',
     'search_found' => 'Searchresults for',
 ];

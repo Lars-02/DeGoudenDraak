@@ -5,6 +5,7 @@ return [
     'download_text' => 'Download',
     'menu_title' => 'Menukaart',
     'menu_number' => 'Nummer',
-    'search' => 'Zoek een gerecht',
+    'search_name' => 'Zoek een gerecht',
+    'search_category' => 'Zoek een category',
     'search_found' => 'Zoekresultaten voor',
 ];
