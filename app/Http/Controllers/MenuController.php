@@ -16,6 +16,10 @@ class MenuController extends Controller
         require_once(__ROOT__ . '\vendor\autoload.php');
 
         $servings = Serving::all();
+        $servings->sortBy(function ($serving) {
+            return $serving->category->name;
+        });
+
         $discounts = Offer::where('ending_at', '>=', Carbon::now())->get();
 
         $mpdf = new Mpdf();
@@ -31,6 +35,7 @@ class MenuController extends Controller
                             <th>Gerecht</th>
                             <th>Beschrijving</th>
                             <th>Pittigheid</th>
+                            <th>Category</th>
                         </tr>
                         </thead>
                         <tbody>');
@@ -42,6 +47,7 @@ class MenuController extends Controller
                                     <td>' . $serving->name . '</td>
                                     <td>' . $serving->description . '</td>
                                     <td style="text-align:center">' . $serving->spice . '</td>
+                                    <td style="text-align:center">' . $serving->category->name . '</td>
                                 </tr>');
         }
         $mpdf->WriteHTML('                </tbody>

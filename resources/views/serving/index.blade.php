@@ -3,8 +3,8 @@
         <h1 class="text-3xl md:text-4xl font-semibold leading-7 md:leading-10 mb-1 text-yellow-300 pb-1 mx-auto">
             {{__('menu_index.download_title')}}</h1>
 
-        <button href="/menu/pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mx-auto mb-4">{{__('menu_index.download_text')}} <i
-                class="fa fa-download" aria-hidden="true"></i></button>
+        <a href="/menu/pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mx-auto mb-4">{{__('menu_index.download_text')}} <i
+                class="fa fa-download" aria-hidden="true"></i></a>
     </div>
 
     <div class="w-full max-w-screen-xl mx-auto px-6">
