@@ -15,30 +15,34 @@
 
                     <form action="/menu" method="GET" class="justify-content-center">
 
-                        <div class="block text-gray-700 text-lg font-semibold py-2 px-2">
+                        <div class="block text-gray-700 text-lg font-semibold py-2 px-2 text-center">
                             {{__('menu_index.menu_title')}}
                         </div>
 
-                        <div class="flex justify-content-end">
+                        <div class="block text-gray-700 text-lg font-semibold py-2 px-2">
+                                                    {{__('menu_index.filter_title')}}
+                                                </div>
+
+                        <div class="flex flex-column flex-wrap-reverse">
                             <input
-                                class="w-75 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2"
-                                id="search" type="search" name="q" value="{{ $query }}"
+                                class="w-75 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none m-2 py-2 px-2"
+                                id="searchDish" type="search" name="q" value="{{ $query }}"
                                 placeholder="{{__('menu_index.search_name')}}">
 
                             <button id='submitQ' type="submit"
-                                    class="appearance-none bg-red-500 block focus:border-red-700 font-medium h-11 hover:bg-red-600 leading-tight rounded-full text-gray-100 w-full md:w-11">
+                                    class="appearance-none bg-red-500 block focus:border-red-700 font-medium h-11 hover:bg-red-600 leading-tight rounded-full text-gray-100 w-full md:w-11 mx-2">
                                 <i class="fa fa-search"></i></button>
 
                         </div>
 
-{{--                        <input--}}
-{{--                            class="w-75 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2"--}}
-{{--                            id="search" type="search" name="category" value="{{ $query }}"--}}
-{{--                            placeholder="{{__('menu_index.search_category')}}">--}}
+                        <input
+                            class="w-75 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2 my-2"
+                            id="searchCategory" type="search" name="category" value="{{ $query }}"
+                            placeholder="{{__('menu_index.search_category')}}">
 
-{{--                        <input--}}
-{{--                            class="w-16 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2"--}}
-{{--                            id="search" type="number" name="number" value="{{ $query }}">--}}
+                        <input
+                            class="w-16 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2 my-2"
+                            placeholder="ID" id="searchId" type="number" name="number" value="{{ $query }}">
 
                     </form>
                     <div class="py-3 text-sm">
@@ -48,15 +52,20 @@
                             @endif
                         </div>
 
-                        @foreach ($servings as $serving)
-                            <a href="/menu/{{ $serving->id }}"
+                        @for ($i = 0; $i < count($servings); $i++)
+                            @if ($i == 0 || $servings[$i-1]->category->name != $servings[$i]->category->name)
+                                <div class="block text-gray-700 text-lg font-semibold py-2 px-2">
+                                    {{$servings[$i]->category->name}}
+                                </div>
+                            @endif
+                            <a href="/menu/{{ $servings[$i]->id }}"
                                class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
                                 <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
-                                <div class="flex-grow font-medium px-2">{{$serving->name}}</div>
+                                <div class="flex-grow font-medium px-2">{{$servings[$i]->name}}</div>
                                 <div class="text-sm font-normal text-gray-500 tracking-wide">
-                                    {{__('menu_index.menu_number')}}: {{$serving->number}}</div>
+                                    {{__('menu_index.menu_number')}}: {{$servings[$i]->number}}</div>
                             </a>
-                        @endforeach
+                        @endfor
                     </div>
                     <div class="block bg-gray-200 text-sm text-right py-2 px-3 -mx-3 -mb-2 rounded-b-lg">
                     </div>

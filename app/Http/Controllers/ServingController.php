@@ -31,9 +31,28 @@ class ServingController extends Controller
 
     private function searchDishes($search)
     {
-        if ($search)
-            return Serving::where('name', 'LIKE', '%' . $search . '%')->get();
-        return Serving::query()->orderBy("name")->get();
+        if ($search) {
+            $servings = Serving::where('name', 'LIKE', '%' . $search . '%')->orderBy("name")->get();
+            $servings->sortBy(function ($serving) {
+                return $serving->category->name;
+            });
+        } else {
+            $servings = Serving::query()->orderBy("name")->get();
+            $servings->sortBy(function ($serving) {
+                return $serving->category->name;
+            });
+        }
+        return $servings;
+    }
+
+    private function searchCategory($search)
+    {
+        
+    }
+
+    private function searchID($search)
+    {
+
     }
 
     /**
@@ -85,13 +104,13 @@ class ServingController extends Controller
     public function edit(Serving $serving)
     {
         $categories = Category::all()->mapWithKeys(function ($item) use ($serving) {
-            return  [$item['id'] => [$serving->category->id === $item['id'], $item['number'] . $item['version'] . ' ' . $item['name']]];
+            return [$item['id'] => [$serving->category->id === $item['id'], $item['number'] . $item['version'] . ' ' . $item['name']]];
         });
         $offers = Offer::all()->mapWithKeys(function ($item) use ($serving) {
-            return  [$item['id'] => [$serving->offer->id === $item['id'], $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']]];
+            return [$item['id'] => [$serving->offer->id === $item['id'], $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']]];
         });
         $allergens = Allergen::all()->mapWithKeys(function ($item) use ($serving) {
-            return  [$item['id'] => [$serving->allergens->contains($item['id']), $item['name']]];
+            return [$item['id'] => [$serving->allergens->contains($item['id']), $item['name']]];
         });
         return view('serving.edit', compact(['serving', 'categories', 'offers', 'allergens']));
     }
