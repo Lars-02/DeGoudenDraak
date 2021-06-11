@@ -11,6 +11,7 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 
@@ -21,12 +22,20 @@ class ServingController extends Controller
      *
      * @return Application|Factory|View|Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $query = request()->query('q');
-        $servings = $this->searchDishes($query);
+        $searchNameQuery = $request->q;
+        $servings = $this->searchDishes($searchNameQuery);
 
-        return view('serving.index', compact(['servings', 'query']));
+        $searchCategoryQuery = $request->category;
+        $servings = $this->searchCategory($servings, $searchCategoryQuery);
+
+        $searchIDQuery = $request->dishID;
+        $servings = $this->searchID($servings, $searchIDQuery);
+
+        $servings = $servings->values();
+
+        return view('serving.index', compact(['servings', 'searchNameQuery', 'searchCategoryQuery', 'searchIDQuery']));
     }
 
     private function searchDishes($search)
@@ -45,14 +54,21 @@ class ServingController extends Controller
         return $servings;
     }
 
-    private function searchCategory($search)
+    private function searchCategory($servings, $search)
     {
-        
+        if ($search) {
+            // WHY THIS NO WORK IT WORK AT LINE 44
+            return $servings->where('name', 'LIKE', '%' . $search . '%');
+        }
+        return $servings;
     }
 
-    private function searchID($search)
+    private function searchID($servings, $search)
     {
-
+        if ($search) {
+            $servings = $servings->where('id', '=', $search);
+        }
+        return $servings;
     }
 
     /**

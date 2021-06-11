@@ -26,7 +26,7 @@
                         <div class="flex flex-column flex-wrap-reverse">
                             <input
                                 class="w-75 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none m-2 py-2 px-2"
-                                id="searchDish" type="search" name="q" value="{{ $query }}"
+                                id="searchDish" type="search" name="q" value="{{ $searchNameQuery }}"
                                 placeholder="{{__('menu_index.search_name')}}">
 
                             <button id='submitQ' type="submit"
@@ -37,18 +37,24 @@
 
                         <input
                             class="w-75 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2 my-2"
-                            id="searchCategory" type="search" name="category" value="{{ $query }}"
+                            id="searchCategory" type="search" name="category" value="{{ $searchCategoryQuery }}"
                             placeholder="{{__('menu_index.search_category')}}">
 
                         <input
                             class="w-16 rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none ml-2 py-2 px-2 my-2"
-                            placeholder="ID" id="searchId" type="number" name="number" value="{{ $query }}">
+                            placeholder="ID" id="searchId" type="number" name="dishID" value="{{ $searchIDQuery }}">
 
                     </form>
                     <div class="py-3 text-sm">
                         <div class="block text-gray-700 text-sm-center font-semibold py-2 px-2">
-                            @if ($query)
-                                <h2>{{__('menu_index.search_found')}} "{{ $query }}"</h2>
+                            @if ($searchNameQuery || $searchCategoryQuery || $searchIDQuery)
+                                <h2>{{__('menu_index.search_found')}}: "
+                                    @if($searchCategoryQuery){{ $searchCategoryQuery }}@endif
+                                    @if($searchNameQuery &&  $searchCategoryQuery): @endif
+                                    @if($searchNameQuery){{ $searchNameQuery }}@endif
+                                    @if(($searchNameQuery || $searchCategoryQuery) && $searchIDQuery) (ID {{ $searchIDQuery }})
+                                    @else ID {{ $searchIDQuery }} @endif
+                                    "</h2>
                             @endif
                         </div>
 
