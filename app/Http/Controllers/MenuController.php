@@ -15,7 +15,7 @@ class MenuController extends Controller
         define('__ROOT__', dirname(dirname(dirname(dirname(__FILE__)))));
         require_once(__ROOT__ . '\vendor\autoload.php');
 
-        $servings = Serving::all();
+        $servings = Serving::orderBy("category_id")->get();
         $servings->sortBy(function ($serving) {
             return $serving->category->name;
         });
@@ -65,18 +65,33 @@ class MenuController extends Controller
                                     <th class="w-1/8">Prijs</th>
                                     <th class="w-3/8">Startdatum</th>
                                     <th class="w-3/8">Einddatum</th>
+                                    <th class="w-3/8">Product</th>
                                 </tr>
                                 </thead>
                                 <tbody>');
 
 
                 foreach ($discounts as $discount) {
+                    $servingsWithDiscount = 'Producten in deze aanbieding: ';
+
+                    if ($discount->servings == null || count($discount->servings) < 1) {
+                        $servingsWithDiscount .= 'Niks';
+                    } else {
+                    foreach ($discount->servings as $serving) {
+                        $servingsWithDiscount .= $serving->name;
+                        $servingsWithDiscount .= ', ';
+                    }
+
+                    $servingsWithDiscount = substr($servingsWithDiscount, 0, -2);
+                    }
+
                     $mpdf->WriteHTML('
                             <tr>
                                             <td style="text-align:center">' . $discount->id . '</td>
                                             <td style="text-align:center">&#8364;' . $discount->price . '</td>
                                             <td>' . $discount->start_at . '</td>
                                             <td>' . $discount->ending_at . '</td>
+                                            <td>' . $servingsWithDiscount . '</td>
                                         </tr>');
                 }
 

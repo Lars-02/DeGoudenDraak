@@ -41,15 +41,9 @@ class ServingController extends Controller
     private function searchDishes($search)
     {
         if ($search) {
-            $servings = Serving::where('name', 'LIKE', '%' . $search . '%')->orderBy("name")->get();
-            $servings->sortBy(function ($serving) {
-                return $serving->category->name;
-            });
+            $servings = Serving::where('name', 'LIKE', '%' . $search . '%')->orderBy("category_id")->get();
         } else {
-            $servings = Serving::query()->orderBy("name")->get();
-            $servings->sortBy(function ($serving) {
-                return $serving->category->name;
-            });
+            $servings = Serving::query()->orderBy("category_id")->get();
         }
         return $servings;
     }

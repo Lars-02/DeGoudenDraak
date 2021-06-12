@@ -17,4 +17,8 @@ class Offer extends Model
     {
         return $this->price . ' euro, ' . $this->start_at . ' - ' . $this->ending_at;
     }
+
+    public function servings() {
+        return $this->hasMany(Serving::class);
+    }
 }
