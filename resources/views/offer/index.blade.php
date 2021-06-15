@@ -1,4 +1,14 @@
 <x-layout>
+    {{--TODO    @if (kassa)--}}
+    <div class="flex flex-col container justify-center content-center mt-5r mx-auto">
+        <h1 class="text-3xl md:text-4xl font-semibold leading-7 md:leading-10 mb-1 text-yellow-300 pb-1 mx-auto">
+            Maak een nieuwe aanbieding</h1>
+
+        <a href="{{route('offer.create')}}"
+           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mx-auto mb-4">Maak nieuw
+            <i class="fa fa-plus"></i></a>
+    </div>
+    {{--TODO    @endif--}}
 
     <h1 class="text-3xl md:text-4xl font-semibold leading-7 md:leading-10 mb-1 mt-3 text-yellow-300 pb-1 mx-auto">{{ __('offer.title') }}</h1>
     <div class="grid mt-8  gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
