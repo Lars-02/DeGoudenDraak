@@ -61,7 +61,7 @@ Route::prefix('tablet')->group(function () {
     Route::get('/login', function () {
         return view('tablet.login');
     });
-    Route::put('/login', [TabletController::class, 'login']);
+    Route::post('/login', [TabletController::class, 'login']);
 
     Route::get('/menu', [TabletController::class, 'tabletMenu']);
 });
