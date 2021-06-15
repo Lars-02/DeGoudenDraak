@@ -1,4 +1,9 @@
 <x-layout>
+    <form action="{{ route('offer.index') }}" class="mb-3">
+            @csrf
+            <x-button type="submit">Terug</x-button>
+        </form>
+
     <form action="{{ route('offer.store') }}" method="POST">
         @csrf
         <div class="select-none grid gap-1 sm:gap-2 md:gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">

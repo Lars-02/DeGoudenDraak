@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'title' => 'Offer :index',
+    'title' => 'Currently available offers',
+    'item_title' => 'Offer :index',
     'price' => 'Price',
     'start_at' => 'Starting date',
     'ending_at' => 'End date',

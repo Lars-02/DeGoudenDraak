@@ -1,5 +1,8 @@
 <x-layout>
+
+    <h1 class="text-3xl md:text-4xl font-semibold leading-7 md:leading-10 mb-1 mt-3 text-yellow-300 pb-1 mx-auto">{{ __('offer.title') }}</h1>
     <div class="grid mt-8  gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+
         @foreach($offers as $index => $offer)
             <a class="cursor-pointer text-gray-800" href="{{route('offer.edit', $offer)}}">
                 <div class="flex flex-col">
@@ -7,7 +10,7 @@
                         <div class="flex-none lg:flex justify-content-center">
                             <div class="flex-auto ml-3 justify-evenly py-2">
                                 <div class="flex flex-wrap ">
-                                    <h2 class="flex-auto text-lg font-medium">{{ __('offer.title', ['index' =>  $index + 1]) }}</h2>
+                                    <h2 class="flex-auto text-lg font-medium">{{ __('offer.item_title', ['index' =>  $index + 1]) }}</h2>
                                 </div>
                                 <p class="mt-3"></p>
                                 <div class="flex py-2  text-sm text-gray-600">

@@ -3,7 +3,9 @@
         <h1 class="text-3xl md:text-4xl font-semibold leading-7 md:leading-10 mb-1 text-yellow-300 pb-1 mx-auto">
             {{__('menu_index.download_title')}}</h1>
 
-        <a href="/menu/pdf" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mx-auto mb-4">{{__('menu_index.download_text')}} <i
+        <a href="/menu/pdf"
+           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mx-auto mb-4">{{__('menu_index.download_text')}}
+            <i
                 class="fa fa-download" aria-hidden="true"></i></a>
     </div>
 
@@ -20,8 +22,8 @@
                         </div>
 
                         <div class="block text-gray-700 text-lg font-semibold py-2 px-2">
-                                                    {{__('menu_index.filter_title')}}
-                                                </div>
+                            {{__('menu_index.filter_title')}}
+                        </div>
 
                         <div class="flex flex-column flex-wrap-reverse">
                             <input
@@ -52,7 +54,8 @@
                                     @if($searchCategoryQuery){{ $searchCategoryQuery }}@endif
                                     @if($searchNameQuery &&  $searchCategoryQuery): @endif
                                     @if($searchNameQuery){{ $searchNameQuery }}@endif
-                                    @if(($searchNameQuery || $searchCategoryQuery) && $searchIDQuery) (ID {{ $searchIDQuery }})
+                                    @if(($searchNameQuery || $searchCategoryQuery) && $searchIDQuery)
+                                        (ID {{ $searchIDQuery }})
                                     @else ID {{ $searchIDQuery }} @endif
                                     "</h2>
                             @endif
