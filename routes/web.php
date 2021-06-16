@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AllergenController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CocktailController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
@@ -63,5 +64,7 @@ Route::prefix('tablet')->group(function () {
     });
     Route::post('/login', [TabletController::class, 'login']);
 
-    Route::get('/menu', [TabletController::class, 'tabletMenu']);
+    Route::get('/menu', [ServingController::class, 'tabletMenu']);
+
+    Route::get('/cocktails', [CocktailController::class, 'index'])->name('cocktails');
 });
