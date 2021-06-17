@@ -13,6 +13,11 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                                <x-button type="submit">Logout</x-button>
+                            </form>
                     </div>
                 </div>
             </div>
