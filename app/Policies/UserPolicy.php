@@ -17,7 +17,7 @@ class UserPolicy
      */
     public function before(User $user)
     {
-        if ($user->abilities()->contains('*.*') || $user->abilities()->contains('user.*') )
+        if ($user->abilities()->contains('*.*'))
             return true;
         return;
     }
@@ -42,7 +42,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        return $user->abilities()->contains('user.update');
+        return false;
     }
 
     /**

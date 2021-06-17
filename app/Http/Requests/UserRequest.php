@@ -24,7 +24,8 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'roles' => 'nullable|array',
+            'roles.*' => 'required|numeric|distinct|exists:allergens,id',
         ];
     }
 }

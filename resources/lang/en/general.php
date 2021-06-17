@@ -3,7 +3,8 @@
 return [
     'edit' => 'Edit',
     'show' => 'More info',
-    'delete' => 'Delete',
+    'destroy' => 'Delete',
     'create' => 'Create :item',
+    'submit' => 'Submit',
     'none' => 'None',
 ];

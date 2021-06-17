@@ -16,9 +16,7 @@ class AbilitySeeder extends Seeder
     {
         Ability::factory()->createMany([
             ['name' => '*.*', 'label' => 'Pass any policy'],
-            ['name' => 'user.*', 'label' => 'Pass all user policies'],
             ['name' => 'user.viewAny', 'label' => 'May view users'],
-            ['name' => 'user.update', 'label' => 'May update users'],
             ['name' => 'user.delete', 'label' => 'May delete users'],
         ]);
     }

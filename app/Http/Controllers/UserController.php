@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserRequest;
 use App\Models\Event;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class UserController extends Controller
 {
@@ -35,34 +39,39 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\User $user
-     * @return void
+     * @param User $user
+     * @return Application|Factory|View
      */
     public function edit(User $user)
     {
-        //
+        $roles = Role::all()->mapWithKeys(function ($item) use ($user) {
+            return [$item['id'] => [$user->roles->contains($item['id']), $item['name']]];
+        });
+        return view('user.edit', ['user' => $user, 'roles' => $roles]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\User $user
-     * @return void
+     * @param UserRequest $request
+     * @param User $user
+     * @return Application|Redirector|RedirectResponse
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
-        //
+        $user->roles()->sync(empty($validated['roles']) ? null : $validated['roles']);
+        return redirect(route('user.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\User $user
-     * @return void
+     * @param User $user
+     * @return Application|Redirector|RedirectResponse
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect(route('user.index'));
     }
 }
