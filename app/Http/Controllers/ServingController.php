@@ -115,7 +115,12 @@ class ServingController extends Controller
      */
     public function show(Serving $serving)
     {
-        return view('serving.show', compact('serving'));
+        $hasNone = false;
+        foreach($serving->allergens as $allergen) {
+            if ($allergen->name == 'None')
+                $hasNone = true;
+        }
+        return view('serving.show', compact('serving', 'hasNone'));
     }
 
     /**

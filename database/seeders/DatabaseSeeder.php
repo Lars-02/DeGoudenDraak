@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             OfferSeeder::class,
             ServingSeeder::class,
+            AllergenSeeder::class,
         ]);
     }
 }
