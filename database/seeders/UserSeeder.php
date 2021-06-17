@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Role;
 use App\Models\User;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -21,15 +22,7 @@ class UserSeeder extends Seeder
                 'lastname' => 'Admin',
                 'email' => 'admin@admin.com']);
         $admin->roles()->sync(Role::all()->where('name','Admin'));
-        User::factory()
-            ->create([
-                'firstname' => 'Lars',
-                'lastname' => 'Meeuwsen',
-                'email' => 'larsmeeuwsen@gmail.com']);
-        User::factory()
-            ->create([
-                'firstname' => 'Vincent',
-                'lastname' => 'Willemsen',
-                'email' => 'vc.willemsen@student.avans.nl']);
+
+        User::factory()->count(40)->create();
     }
 }
