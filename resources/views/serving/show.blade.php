@@ -11,6 +11,22 @@
                 <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.offer') }}</h2>
                 <a class="ml-2 text-gray-800" href="{{ route('offer.index') }}">{{ $serving->offer->name }}</a>
             </div>
+            
+            @if(count($serving->allergens) == 0 || $hasNone)
+                <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergens') }}: {{ __('general.none') }}</h2>
+            @else
+                @if(count($serving->allergens) == 1)
+                    <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergen') }}</h2>
+                @else
+                    <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergens') }}</h2>
+                @endif
+                @foreach($serving->allergens as $allergen)
+                    <div>
+                        <a class="ml-2 text-gray-800" href="{{ route('allergen.index') }}">{{ $allergen->name }}</a>
+                    </div>
+                @endforeach
+            @endif
+
             @if($serving->spice > 0)
                 <div class="flex">
                     <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.spicy_title') }}</h2>
