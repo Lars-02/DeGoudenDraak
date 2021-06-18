@@ -22,10 +22,10 @@
 </head>
 <body>
 
-<div class="bg-red-600 min-h-screen flex flex-col">
+<div class="bg-red-700 min-h-screen flex flex-col">
     @include('components.layouts.header')
 
-    <div class="custom-border flex-grow">
+    <div class="custom-border flex-grow bg-red-600">
         {{ $slot }}
     </div>
 

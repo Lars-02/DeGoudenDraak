@@ -29,4 +29,10 @@ class OfferRequest extends FormRequest
             'ending_at' => 'nullable|date|after:start_at',
         ];
     }
+
+    public function messages()
+    {
+        return [
+        ];
+    }
 }
