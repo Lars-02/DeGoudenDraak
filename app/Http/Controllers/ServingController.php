@@ -48,6 +48,19 @@ class ServingController extends Controller
         return $servings;
     }
 
+    public function tabletMenu(Request $request)
+    {
+        $searchNameQuery = $request->q;
+        $servings = ServingController::searchDishes($searchNameQuery);
+
+        $searchCategoryQuery = $request->category;
+        $servings = $this->searchCategory($servings, $searchCategoryQuery);
+
+        $servings = $servings->values();
+
+        return view('tablet.menu', compact(['servings', 'searchNameQuery', 'searchCategoryQuery']));
+    }
+
     private function searchCategory($servings, $search)
     {
         if ($search) {
@@ -102,7 +115,12 @@ class ServingController extends Controller
      */
     public function show(Serving $serving)
     {
-        return view('serving.show', compact('serving'));
+        $hasNone = false;
+        foreach($serving->allergens as $allergen) {
+            if ($allergen->name == 'None')
+                $hasNone = true;
+        }
+        return view('serving.show', compact('serving', 'hasNone'));
     }
 
     /**

@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\AllergenController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CocktailController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ServingController;
+use App\Http\Controllers\TabletController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +46,10 @@ Route::get('/news', function () {
     return view('news');
 });
 
+Route::resource('user', UserController::class)
+    ->except('create', 'store', 'show');
+
+
 Route::resource('offer', OfferController::class)
     ->except('show');
 
@@ -55,3 +62,14 @@ Route::resource('allergen', AllergenController::class)
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::prefix('tablet')->group(function () {
+    Route::get('/login', function () {
+        return view('tablet.login');
+    });
+    Route::post('/login', [TabletController::class, 'login']);
+
+    Route::get('/menu', [ServingController::class, 'tabletMenu']);
+
+    Route::get('/cocktails', [CocktailController::class, 'index'])->name('cocktails');
+});

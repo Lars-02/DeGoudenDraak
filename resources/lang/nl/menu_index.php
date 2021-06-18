@@ -3,7 +3,7 @@
 return [
     'download_title' => 'Download het menu',
     'download_text' => 'Download',
-    'filter_title' => 'Filter section',
+    'filter_title' => 'Filter sectie',
     'menu_title' => 'Menukaart',
     'menu_number' => 'Nummer',
     'search_name' => 'Zoek een gerecht',

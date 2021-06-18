@@ -133,3 +133,4 @@ fabric.properties
 ### Webpack mix ###
 /public/css
 /public/js
+/public/fonts/vendor
