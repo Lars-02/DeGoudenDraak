@@ -33,4 +33,8 @@ class Order extends Model
         'price',
         'spice'
     ];
+
+    public function servings() {
+        return $this->belongsToMany(Serving::class);
+    }
 }
