@@ -9,7 +9,8 @@ class CocktailController extends Controller
 {
     public function index(Request $request)
     {
+        $tablenumber = $request->route('tablenumber');
         $data = Http::get('www.thecocktaildb.com/api/json/v1/1/search.php?s='. $request->get('q'))->json();
-        return view('tablet.cocktail', compact(['data']));
+        return view('tablet.cocktail', compact(['data', 'tablenumber']));
     }
 }

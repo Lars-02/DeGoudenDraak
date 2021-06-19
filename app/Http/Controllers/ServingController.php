@@ -50,6 +50,7 @@ class ServingController extends Controller
 
     public function tabletMenu(Request $request)
     {
+        $tablenumber = $request->tablenumber;
         $searchNameQuery = $request->q;
         $servings = ServingController::searchDishes($searchNameQuery);
 
@@ -58,7 +59,7 @@ class ServingController extends Controller
 
         $servings = $servings->values();
 
-        return view('tablet.menu', compact(['servings', 'searchNameQuery', 'searchCategoryQuery']));
+        return view('tablet.menu', compact(['servings', 'searchNameQuery', 'searchCategoryQuery', 'tablenumber']));
     }
 
     private function searchCategory($servings, $search)

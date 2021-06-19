@@ -69,7 +69,9 @@ Route::prefix('tablet')->group(function () {
     });
     Route::post('/login', [TabletController::class, 'login']);
 
-    Route::get('/menu', [ServingController::class, 'tabletMenu']);
+    Route::get('/menu/{tablenumber}', [ServingController::class, 'tabletMenu']);
 
-    Route::get('/cocktails', [CocktailController::class, 'index'])->name('cocktails');
+    Route::get('/cocktails/{tablenumber}', [CocktailController::class, 'index'])->name('cocktails');
+
+    Route::get('/help/{tablenumber}', [TabletController::class, 'sendHelp']);
 });

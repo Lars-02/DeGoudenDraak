@@ -40,15 +40,21 @@
                         <table style="margin:auto;font-size:20px;color:white" border="1px solid white">
                             <tr background="{{asset("/images/menu_bg_gradient.png")}}">
                                 <td valign="middle">
-                                    <a href="/tablet/menu"
+                                    <a href="/tablet/menu/{{$tablenumber}}"
                                        style="color:white;margin-left:1vw;margin-right:1vw;">
                                         Menu
                                     </a>
                                 </td>
                                 <td valign="middle">
-                                    <a href="/tablet/cocktails"
+                                    <a href="/tablet/cocktails/{{$tablenumber}}"
                                        style="color:white;margin-left:1vw;margin-right:1vw;">
                                         Cocktails
+                                    </a>
+                                </td>
+                                <td valign="middle">
+                                    <a href="/tablet/help/{{$tablenumber}}"
+                                       style="color:white;margin-left:1vw;margin-right:1vw;">
+                                        Help me
                                     </a>
                                 </td>
                             </tr>
