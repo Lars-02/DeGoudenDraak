@@ -34,6 +34,33 @@
                         </tr>
                     </table>
                 </div>
+
+                @if(auth()->user()->is_admin == true)
+                <div class="flex flex-nowrap items-center mt-3">
+                    <table style="margin:auto;font-size:20px;color:white" border="1px solid white">
+                        <tr background="{{asset("/images/menu_bg_gradient.png")}}">
+                            <td valign="middle">
+                                <a href="/"
+                                   style="color:white;margin-left:1vw;margin-right:1vw;">
+                                    Gebruikers
+                                </a>
+                            </td>
+                            <td valign="middle">
+                                <a href="/"
+                                   style="color:white;margin-left:1vw;margin-right:1vw;">
+                                    Gerecht toevoegen
+                                </a>
+                            </td>
+                            <td valign="middle">
+                                <a href="/"
+                                   style="color:white;margin-left:1vw;margin-right:1vw;">
+                                    Hulpverzoeken
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                    @endif
             </div>
             <img src="{{asset("/images/dragon.png")}}"
                  class="mirror object-contain h-48 w-48 mx-auto hidden lg:block">
