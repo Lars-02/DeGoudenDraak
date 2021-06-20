@@ -6,5 +6,6 @@ return [
     'destroy' => 'Delete',
     'create' => 'Create :item',
     'submit' => 'Submit',
+    'choose' => 'Choose your :item',
     'none' => 'None',
 ];

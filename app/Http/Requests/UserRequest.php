@@ -13,7 +13,7 @@ class UserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class UserRequest extends FormRequest
     {
         return [
             'roles' => 'nullable|array',
-            'roles.*' => 'required|numeric|distinct|exists:allergens,id',
+            'roles.*' => 'nullable|numeric|distinct|exists:roles,id',
         ];
     }
 }

@@ -12,8 +12,9 @@
         @endif
         {{$attributes->class(['text-xs sm:text-sm md:text-base lg:text-lg px-2.5 py-2.5 pl-4 w-full rounded border-gray-400 focus:border-gray-400 text-gray-600 focus:ring-0'])}}
     >
-        <option disabled>Kies uw {{$slot}}</option>
-        @foreach($options as $option => $value)
+        <option disabled>{{ __('general.choose', ['item' => $slot]) }}</option>
+        <option value>{{ __('general.none') }}</option>
+    @foreach($options as $option => $value)
             <option
                 value="{{ $option }}"
                 @if(is_array($value) && (is_bool($value[0]) ? $value[0] : false))
