@@ -14,10 +14,10 @@
     >
         <option disabled>{{ __('general.choose', ['item' => $slot]) }}</option>
         <option value>{{ __('general.none') }}</option>
-    @foreach($options as $option => $value)
+        @foreach($options as $option => $value)
             <option
                 value="{{ $option }}"
-                @if(is_array($value) && (is_bool($value[0]) ? $value[0] : false))
+                @if(is_array($value) && is_bool($value[0]) && $value[0])
                 selected
                 @endif
             >
@@ -25,4 +25,7 @@
             </option>
         @endforeach
     </select>
+    @error($id)
+    <span class="text-red-600">{{ $message }}</span>
+    @enderror
 </div>

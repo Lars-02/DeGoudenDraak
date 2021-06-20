@@ -13,6 +13,6 @@
         />
     </div>
     @error($id)
-    <span class="text-red-600">{{ $message }}</span>
+    <span class="text-white-600">{{ $message }}</span>
     @enderror
 </div>

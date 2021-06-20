@@ -33,7 +33,7 @@ class ServingRequest extends FormRequest
             'price' =>  'required|numeric|between:1,100',
             'offer_id' =>  'nullable|numeric|exists:offers,id',
             'allergens' => 'nullable|array',
-            'allergens.*' => 'required|numeric|distinct|exists:allergens,id',
+            'allergens.*' => 'nullable|numeric|distinct|exists:allergens,id',
         ];
     }
 }

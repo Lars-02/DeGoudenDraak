@@ -20,7 +20,7 @@ class ServingController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Application|Factory|View|Response
+     * @return Application|Factory|View
      */
     public function index(Request $request)
     {
@@ -82,7 +82,7 @@ class ServingController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Application|Factory|View|Response
+     * @return Application|Factory|View
      */
     public function create()
     {
@@ -100,11 +100,25 @@ class ServingController extends Controller
      * Store a newly created resource in storage.
      *
      * @param ServingRequest $request
-     * @return Application|RedirectResponse|Response|Redirector
+     * @return Application|Redirector|RedirectResponse
      */
     public function store(ServingRequest $request)
     {
-        $serving = Serving::create($request->validated());
+        $serving = Serving::create($request->all([
+            'number',
+            'version',
+            'name',
+            'description',
+            'category_id',
+            'price',
+            'offer_id',
+            'spice',
+        ]));
+        if (in_array(null, $request->get('allergens')))
+            $serving->allergens()->detach();
+        else
+            $serving->allergens()->sync($request->get('allergens'));
+
         return redirect(route('serving.show', ["serving" => $serving]));
     }
 
@@ -112,12 +126,12 @@ class ServingController extends Controller
      * Display the specified resource.
      *
      * @param Serving $serving
-     * @return Application|Factory|View|Response
+     * @return Application|Factory|View
      */
     public function show(Serving $serving)
     {
         $hasNone = false;
-        foreach($serving->allergens as $allergen) {
+        foreach ($serving->allergens as $allergen) {
             if ($allergen->name == 'None')
                 $hasNone = true;
         }
@@ -128,7 +142,7 @@ class ServingController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param Serving $serving
-     * @return Application|Factory|View|Response
+     * @return Application|Factory|View
      */
     public function edit(Serving $serving)
     {
@@ -136,7 +150,7 @@ class ServingController extends Controller
             return [$item['id'] => [$serving->category->id === $item['id'], $item['number'] . $item['version'] . ' ' . $item['name']]];
         });
         $offers = Offer::all()->mapWithKeys(function ($item) use ($serving) {
-            return [$item['id'] => [$serving->offer->id === $item['id'], $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']]];
+            return [$item['id'] => [!empty($offer = $serving->offer) && $offer->id === $item['id'], $item['price'] . ' euro, ' . $item['start_at'] . ' - ' . $item['ending_at']]];
         });
         $allergens = Allergen::all()->mapWithKeys(function ($item) use ($serving) {
             return [$item['id'] => [$serving->allergens->contains($item['id']), $item['name']]];
@@ -149,14 +163,24 @@ class ServingController extends Controller
      *
      * @param ServingRequest $request
      * @param Serving $serving
-     * @return Application|RedirectResponse|Response|Redirector
+     * @return Application|Redirector|RedirectResponse
      */
     public function update(ServingRequest $request, Serving $serving)
     {
-        $validated = $request->validated();
-        $serving->allergens()->sync(empty($validated['allergens']) ? null : $validated['allergens']);
-        unset($validated['allergens']);
-        $serving->update($validated);
+        $serving->update($request->all([
+            'number',
+            'version',
+            'name',
+            'description',
+            'category_id',
+            'price',
+            'offer_id',
+            'spice',
+        ]));
+        if (in_array(null, $request->get('allergens')))
+            $serving->allergens()->detach();
+        else
+            $serving->allergens()->sync($request->get('allergens'));
         $serving->save();
         return redirect(route('serving.show', $serving));
     }
@@ -165,7 +189,7 @@ class ServingController extends Controller
      * Remove the specified resource from storage.
      *
      * @param Serving $serving
-     * @return Application|RedirectResponse|Response|Redirector
+     * @return Application|Redirector|RedirectResponse
      */
     public function destroy(Serving $serving)
     {

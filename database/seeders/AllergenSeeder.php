@@ -17,7 +17,6 @@ class AllergenSeeder extends Seeder
     public function run()
     {
         $allergens = Allergen::factory()->createMany([
-            ['name' => 'None'],
             ['name' => 'Melk'],
             ['name' => 'Gluten'],
             ['name' => 'Noten'],

@@ -7,24 +7,22 @@
                 <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.category') }}</h2>
                 <a class="ml-2 text-gray-800" href="{{ route('category.index') }}">{{ $serving->category->name }}</a>
             </div>
-            <div>
-                <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.offer') }}</h2>
-                <a class="ml-2 text-gray-800" href="{{ route('offer.index') }}">{{ $serving->offer->name }}</a>
-            </div>
-            
-            @if(count($serving->allergens) == 0 || $hasNone)
-                <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergens') }}: {{ __('general.none') }}</h2>
-            @else
-                @if(count($serving->allergens) == 1)
-                    <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergen') }}</h2>
-                @else
+                        @if(!empty($serving->offer))
+                <div>
+                    <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.offer') }}</h2>
+                    <a class="ml-2 text-gray-800" href="{{ route('offer.index') }}">{{ $serving->offer->name }}</a>
+                </div>
+            @endif
+
+            @if(!empty($serving->allergens->all()))
+                <div>
                     <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergens') }}</h2>
-                @endif
-                @foreach($serving->allergens as $allergen)
-                    <div>
-                        <a class="ml-2 text-gray-800" href="{{ route('allergen.index') }}">{{ $allergen->name }}</a>
-                    </div>
-                @endforeach
+                    @foreach($serving->allergens as $allergen)
+                        <div>
+                            <a class="ml-2 text-gray-800" href="{{ route('allergen.index') }}">{{ $allergen->name }}</a>
+                        </div>
+                    @endforeach
+                </div>
             @endif
 
             @if($serving->spice > 0)
