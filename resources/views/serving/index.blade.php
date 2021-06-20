@@ -72,7 +72,7 @@
                                 <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
                                 <div class="flex-grow font-medium px-2">{{$servings[$i]->name}}</div>
                                 <div class="text-sm font-normal text-gray-500 tracking-wide">
-                                    {{__('menu_index.menu_number')}}: {{$servings[$i]->number}}</div>
+                                    {{__('menu_index.menu_number')}}: {{$servings[$i]->number}}{{$servings[$i]->version}}</div>
                             </a>
                         @endfor
                     </div>
