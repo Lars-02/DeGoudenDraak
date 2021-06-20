@@ -59,11 +59,10 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, User $user)
     {
-        $validated = $request->validated();
-        if (in_array(null, $validated['roles']))
+        if (in_array(null, $request->get('roles')))
             $user->roles()->detach();
         else
-            $user->roles()->sync($validated['roles']);
+            $user->roles()->sync($request->get('roles'));
         return redirect(route('user.index'));
     }
 
