@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'title' => 'Menu',
     'download_title' => 'Download the menu',
     'download_text' => 'Download now',
     'filter_title' => 'Filter menu',

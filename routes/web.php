@@ -6,6 +6,7 @@ use App\Http\Controllers\CocktailController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ServingController;
 use App\Http\Controllers\TabletController;
@@ -62,6 +63,10 @@ Route::resource('category', CategoryController::class)
 
 Route::resource('allergen', AllergenController::class)
     ->only('index', 'store', 'destroy');
+
+Route::group(['middleware' => ['auth', 'cashier']], function () {
+    Route::resource('order', OrderController::class);
+});
 
 Auth::routes();
 

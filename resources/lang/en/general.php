@@ -8,4 +8,5 @@ return [
     'submit' => 'Submit',
     'choose' => 'Choose your :item',
     'none' => 'None',
+    'logout' => 'Logout',
 ];
