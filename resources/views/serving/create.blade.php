@@ -7,7 +7,7 @@
         <div class="select-none grid gap-1 sm:gap-2 md:gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
             <x-input type="number" id="number">{{ __('serving.number') }}</x-input>
             <x-input type="text" id="version">{{ __('serving.version') }}</x-input>
-            <x-select id="category_id" :options="$categories">{{ __('serving.category') }}</x-select>
+            <x-select id="category_id" :options="$categories" required>{{ __('serving.category') }}</x-select>
 
             <x-input type="text" id="name">{{ __('serving.name') }}</x-input>
             <x-input type="text" id="description">{{ __('serving.description') }}</x-input>

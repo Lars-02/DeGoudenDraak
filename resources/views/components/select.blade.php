@@ -1,4 +1,4 @@
-@props(['id', 'options', 'name' => null, 'multi' => false])
+@props(['id', 'options', 'name' => null, 'multi' => false, 'required' => false])
 
 <div class="mb-8">
     <label
@@ -13,7 +13,9 @@
         {{$attributes->class(['text-xs sm:text-sm md:text-base lg:text-lg px-2.5 py-2.5 pl-4 w-full rounded border-gray-400 focus:border-gray-400 text-gray-600 focus:ring-0'])}}
     >
         <option disabled>{{ __('general.choose', ['item' => $slot]) }}</option>
-        <option value>{{ __('general.none') }}</option>
+        @if(!$required)
+            <option value>{{ __('general.none') }}</option>
+        @endif
         @foreach($options as $option => $value)
             <option
                 value="{{ $option }}"
@@ -26,6 +28,6 @@
         @endforeach
     </select>
     @error($id)
-    <span class="text-red-600">{{ $message }}</span>
+    <span class="text-white-600">{{ $message }}</span>
     @enderror
 </div>
