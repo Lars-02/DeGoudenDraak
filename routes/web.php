@@ -6,6 +6,7 @@ use App\Http\Controllers\CocktailController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ServingController;
 use App\Http\Controllers\TabletController;
 use App\Http\Controllers\UserController;
@@ -48,6 +49,9 @@ Route::get('/news', function () {
 
 Route::resource('user', UserController::class)
     ->except('create', 'store', 'show');
+
+Route::resource('role', RoleController::class)
+    ->only('index', 'edit', 'update');
 
 
 Route::resource('offer', OfferController::class)

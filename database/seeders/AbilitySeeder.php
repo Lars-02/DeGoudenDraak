@@ -18,6 +18,7 @@ class AbilitySeeder extends Seeder
             ['name' => '*.*', 'label' => 'Pass any policy'],
             ['name' => 'user.viewAny', 'label' => 'May view users'],
             ['name' => 'user.delete', 'label' => 'May delete users'],
+            ['name' => 'role.viewAny', 'label' => 'May view roles'],
         ]);
     }
 }

@@ -7,14 +7,14 @@
                 <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.category') }}</h2>
                 <a class="ml-2 text-gray-800" href="{{ route('category.index') }}">{{ $serving->category->name }}</a>
             </div>
-                        @if(!empty($serving->offer))
+            @if(!empty($serving->offer))
                 <div>
                     <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.offer') }}</h2>
                     <a class="ml-2 text-gray-800" href="{{ route('offer.index') }}">{{ $serving->offer->name }}</a>
                 </div>
             @endif
 
-            @if(!empty($serving->allergens->all()))
+            @if(!$serving->allergens->isEmpty())
                 <div>
                     <h2 class="font-medium text-xl text-yellow-300">{{ __('serving.allergens') }}</h2>
                     @foreach($serving->allergens as $allergen)
