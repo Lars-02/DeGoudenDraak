@@ -19,14 +19,7 @@
             </form>
         </div>
     </nav>
-    <div class="flex">
-        <div class="border-r-2 border-blue-600">
-{{--            @foreach($items)--}}
+    <order-create v-bind:items="{{$items}}">
 
-{{--                @endforeach--}}
-        </div>
-        <div>
-
-        </div>
-    </div>
+    </order-create>
 </x-cashier>

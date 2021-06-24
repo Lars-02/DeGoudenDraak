@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Table whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Table whereSeats($value)
  * @mixin \Eloquent
+ * @method static \Database\Factories\TableFactory factory(...$parameters)
  */
 class Table extends Model
 {

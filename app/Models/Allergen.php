@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Allergen whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Allergen whereName($value)
  * @mixin \Eloquent
+ * @method static \Database\Factories\AllergenFactory factory(...$parameters)
  */
 class Allergen extends Model
 {

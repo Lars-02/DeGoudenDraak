@@ -20,6 +20,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereTableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Order whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Serving[] $servings
+ * @property-read int|null $servings_count
+ * @method static \Database\Factories\OrderFactory factory(...$parameters)
  */
 class Order extends Model
 {

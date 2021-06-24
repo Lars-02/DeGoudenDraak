@@ -24,6 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Ability whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ability whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @method static \Database\Factories\AbilityFactory factory(...$parameters)
  */
 class Ability extends Model
 {
